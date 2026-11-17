@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="김어진 포트폴리오 — 2026 erial carob AI 패션 캠페인, 2025 디자인 포트폴리오">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>김어진 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Archivo:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: one sticky bar with year tabs (like sheet tabs); below it, one full-width portfolio per year. */
+:root {
+  --bar: #0A0A0A;
+  --bar-fg: #FFFFFF;
+  --bar-muted: #8C8C8C;
+  --accent: #E6007E;
+  --ground-2026: #0A0A0A;
+  --ground-2025: #EFEBF2;
+  --paper-2025: #FCFAF8;
+  --font-ui: "Archivo", "Noto Sans KR", system-ui, sans-serif;
+  color-scheme: dark;
+}
+body { background: var(--bar); color: var(--bar-fg); font-family: var(--font-ui); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bar); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bar); border-bottom: 1px solid #262626; }
+.bar-in {
+  max-width: 1400px; margin: 0 auto; box-sizing: border-box;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0; min-height: 56px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;
+}
+.who { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+.who span { color: var(--bar-muted); font-weight: 500; margin-left: 10px; letter-spacing: 0.12em; }
+.tabs { display: flex; align-self: stretch; gap: 4px; }
+.tab {
+  appearance: none; border: 0; background: transparent; color: var(--bar-muted);
+  font: 600 14px var(--font-ui); letter-spacing: 0.08em; padding: 0 18px; min-height: 56px; min-width: 64px;
+  cursor: pointer; border-bottom: 2px solid transparent; font-variant-numeric: tabular-nums;
+}
+.tab:hover { color: var(--bar-fg); }
+.tab[aria-selected="true"] { color: var(--bar-fg); border-bottom-color: var(--accent); }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+.count { font-size: 12px; color: var(--bar-muted); font-variant-numeric: tabular-nums; min-width: 56px; text-align: right; }
+
+#y2026 { background: var(--ground-2026); }
+#y2026 .wrap { max-width: 1400px; margin: 0 auto; color: #0A0A0A; font-family: 'Archivo', 'Noto Sans KR', sans-serif; }
+#y2026 img, #y2026 video { max-width: 100%; }
+#y2026 h1, #y2026 h2 { text-wrap: balance; }
+#y2026 p, #y2026 li, #y2026 dd { text-wrap: pretty; }
+#y2026 [style*="text-transform: uppercase"] { line-height: 1.5; }
+#y2026 [style*="Noto Sans KR"] { letter-spacing: -0.01em; word-break: keep-all; }
+#y2026 figcaption { line-height: 1.5; }
+
+#y2025 { background: var(--ground-2025); }
+#y2025 .wrap { max-width: 1600px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; padding-block: 0 48px; }
+#y2025 .page { margin: 0; background: var(--paper-2025); }
+#y2025 .page img { display: block; width: 100%; height: auto; }
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <div class="who">Kim Eo Jin<span>Portfolio</span></div>
+    <div class="tabs" role="tablist" aria-label="연도별 포트폴리오">
+      <button class="tab" role="tab" id="tab-2026" aria-controls="y2026" aria-selected="true" type="button">2026</button>
+      <button class="tab" role="tab" id="tab-2025" aria-controls="y2025" aria-selected="false" type="button" tabindex="-1">2025</button>
+    </div>
+    <span class="count" id="count" aria-live="polite" hidden></span>
+  </div>
+</header>
+
+<main>
+<section id="y2026" role="tabpanel" aria-labelledby="tab-2026">
+<div class="wrap">
+<!-- S01CoverV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <header style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 32px 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>EO Visual Studio</span>
+    <span style="color: #A6A6A6">AI Fashion Campaign · Editorial · Film</span>
+    <span style="color: #A6A6A6">Four Seasons</span>
+    <span>2025 — 2026</span>
+  </header>
+  <figure style="margin: 0">
+    <img src="assets/2f31a24d61756aa689dee098330dad25.jpg" alt="Model striding past a carved wooden door at night in a beige cropped trench, black leather skirt and tan nubuck western boots" style="display: block; width: 100%; height: auto">
+  </figure>
+  <h1 style="margin: 0; padding: 40px 24px 0 24px">
+    <svg viewBox="0 0 1352 200" width="100%" role="img" aria-label="Four Seasons" style="display: block; overflow: visible">
+      <text x="0" y="186" textLength="1352" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" font-family="'Cormorant Garamond', serif" font-size="282" font-weight="400" letter-spacing="-4">Four Seasons</text>
+    </svg>
+  </h1>
+  <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 48px 24px 40px 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>(001)</span>
+    <span style="color: #A6A6A6">Winter — Autumn — Summer — Spring</span>
+    <span style="display: flex; align-items: center; gap: 14px"><span style="display: inline-block; width: 64px; height: 1px; background: #E6007E"></span>Scroll</span>
+  </footer>
+</section>
+<!-- S02OverviewV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', 'Noto Sans KR', sans-serif; padding: 150px 48px 150px 48px; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div style="flex: 1 1 220px; min-width: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+      <p style="margin: 0">(002)</p>
+      <p style="margin: 8px 0 0 0">Project Overview</p>
+    </div>
+    <h2 style="flex: 3 1 640px; min-width: 0; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 66px); line-height: 1.08; letter-spacing: -0.015em">
+      Finding beauty in the everyday — a quiet sensibility that <span style="font-style: italic; color: #E6007E">deepens with time.</span>
+    </h2>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; margin-top: 120px">
+    <figure style="flex: 1 1 220px; min-width: 0; max-width: 300px; margin: 0">
+      <img src="assets/889bafa083ca51c39c627da32c94e55c.jpg" alt="Model glancing back mid-stride in a taupe fur jacket with the black Mumu bag, red facade behind" style="display: block; width: 100%; height: auto">
+      <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.14em; color: #5C5C5C">FIG. 01 — Mumu Bag, Winter</figcaption>
+    </figure>
+    <div style="flex: 3 1 640px; min-width: 0; display: flex; flex-wrap: wrap; gap: 48px">
+      <div style="flex: 1 1 260px; min-width: 0">
+        <p style="margin: 0 0 18px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.01em">Concept</p>
+        <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.85; color: #5C5C5C; word-break: keep-all">에리얼카럽이 추구하는 모던하고 절제된 감성을 바탕으로, 일상 속 자연스러운 스타일링과 계절마다 변화하는 분위기를 하나의 시각적 흐름으로 표현했습니다.</p>
+      </div>
+      <div style="flex: 1 1 260px; min-width: 0">
+        <p style="margin: 0 0 18px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.01em">Creative Intent</p>
+        <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.85; color: #5C5C5C; word-break: keep-all">AI 이미지와 영상 제작을 통해 브랜드의 일관된 아이덴티티를 유지하면서도, 사계절마다 다른 소재와 실루엣, 공간의 분위기를 감각적인 패션 비주얼로 확장하고자 했습니다.</p>
+      </div>
+      <dl style="flex: 1 1 100%; margin: 24px 0 0 0; padding-top: 24px; border-top: 1px solid #0A0A0A; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+        <div><dt style="color: #5C5C5C">Client</dt><dd style="margin: 8px 0 0 0">erial carob — In-house Designer</dd></div>
+        <div><dt style="color: #5C5C5C">Scope</dt><dd style="margin: 8px 0 0 0">Four Seasons · Stills · Film</dd></div>
+        <div><dt style="color: #5C5C5C">Year</dt><dd style="margin: 8px 0 0 0">2025 — 2026</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<!-- S07FilmV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 64px 48px">
+    <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+      <p style="margin: 0">(003)</p>
+      <p style="margin: 8px 0 0 0; color: #A6A6A6">Seven films · Four seasons</p>
+    </div>
+    <h2 style="margin: 0; text-align: right; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
+      <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px">AI Fashion</span>
+      <span style="display: block; font-size: clamp(110px, 18vw, 260px); font-style: italic; color: #E6007E">Film</span>
+    </h2>
+  </div>
+  <figure style="margin: 0">
+    <video src="assets/161c82a6432c11448d7499bdc13f0a06.mp4" poster="assets/5e4e901b0fa8b83082b9e2ea9573fffb.jpg" controls playsinline preload="metadata" aria-label="Film 01 — Filet Classic Belt" style="display: block; width: 100%; height: auto; background: #000"></video>
+    <figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 18px 48px 0 48px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">
+      <span>Film 01 · 16:9 · 00:09</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0; text-transform: none; color: #FFFFFF">Filet Classic Belt — Summer</span>
+    </figcaption>
+  </figure>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding: 120px 48px 0 48px; align-items: start">
+    <figure style="margin: 0px 0 0 0">
+      <video src="assets/f202edbb09d15e0b73815a31949bb66c.mp4" poster="assets/fb8831823c736d92bce3382061f7737f.jpg" controls playsinline preload="metadata" aria-label="Film 02 — Ankle Brontë Boots" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 02 · 9:16</span><span>00:11</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Ankle Brontë Boots</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Autumn</span>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <video src="assets/f558046a98a35fe9c2ee752c5d72fcae.mp4" poster="assets/d13a9907bc48038de56fbf3d1ac29dcc.jpg" controls playsinline preload="metadata" aria-label="Film 03 — Woonts Long Boots × Mumu Bag — Office" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 03 · 9:16</span><span>00:15</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Woonts Long Boots × Mumu Bag — Office</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Autumn / Winter</span>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <video src="assets/5221a6fc53657fd16d37387c0a3da3c5.mp4" poster="assets/de757abaaa56f36bb98aae33d5c3f0db.jpg" controls playsinline preload="metadata" aria-label="Film 04 — Woonts Long Boots × Mumu Bag" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 04 · 9:16</span><span>00:17</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Woonts Long Boots × Mumu Bag</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Autumn / Winter</span>
+      </figcaption>
+    </figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding: 56px 48px 0 48px; align-items: start">
+    <figure style="margin: 0px 0 0 0">
+      <video src="assets/32f8b76518a91a2e6ce38908a287f7cd.mp4" poster="assets/d83a0ae739b6cf15dc5988c1c77591bb.jpg" controls playsinline preload="metadata" aria-label="Film 05 — Woonts Winter Boots × Ribbon Bag" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 05 · 9:16</span><span>00:14</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Woonts Winter Boots × Ribbon Bag</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Winter</span>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <video src="assets/2601394b395828454d8373cfb0b375f3.mp4" poster="assets/84959764231442c6849d5f9916f29cd9.jpg" controls playsinline preload="metadata" aria-label="Film 06 — Woonts Winter Boots" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 06 · 9:16</span><span>00:16</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Woonts Winter Boots</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Winter</span>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <video src="assets/cd643284269b04fab9c09105d60593b7.mp4" poster="assets/3396e31ca9cc5384f48a9939b4ba5906.jpg" controls playsinline preload="metadata" aria-label="Film 07 — Woonts Long Boots, Office — Final" style="display: block; width: 100%; height: auto; background: #000"></video>
+      <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
+        <span style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6"><span>Film 07 · 9:16</span><span>00:12</span></span>
+        <span style="display: block; margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 24px; line-height: 1.15">Woonts Long Boots — Office</span>
+        <span style="display: block; margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">Winter</span>
+      </figcaption>
+    </figure>
+  </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; margin: 96px 48px 0 48px; padding-top: 32px; border-top: 1px solid #3A3A3A">
+    <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3">AI-driven fashion films exploring movement, atmosphere, and the visual identity of everyday style.</p>
+    <dl style="margin: 0; min-width: 320px; display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 20px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; ">
+      <div><dt style="color: #A6A6A6">Format</dt><dd style="margin: 8px 0 0 0">16:9 · 9:16</dd></div>
+    </dl>
+  </div>
+  <div style="height: 140px"></div>
+</section>
+<!-- SeasonWinterV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0E1114; color: #F4F4F2; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 40px 48px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>(004) — Chapter I</span><span style="color: #A9B0B6">erial carob — Winter Release</span>
+  </div>
+  <figure style="margin: 0; position: relative">
+    <img loading="lazy" decoding="async" src="assets/6ce5ed5df238e57c17cbb8bee91cfc12.jpg" alt="Model lying on a snow-covered mossy boulder at night in a white shaggy coat and black suede long boots" style="display: block; width: 100%; height: auto">
+    <h2 style="position: absolute; left: 36px; bottom: 4px; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(120px, 19vw, 270px); line-height: 0.9; letter-spacing: -0.02em; color: #FFFFFF">Winter<span style="color: #E6007E">.</span></h2>
+  </figure>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 96px 48px 72px 48px">
+    <div>
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B0B6">Black Suede</p>
+      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Long Boots</span></p>
+    </div>
+    <div style="max-width: 340px">
+      
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">Looks I.01 — I.07</p>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 4px">
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/cfa7a0d7a8506df18a0bfc6d0864c982.jpg" alt="Model seated on a Paris curb in a black fluffy cardigan, lace tights and black suede long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.02</figcaption></figure>
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/e9303567d644b988e1ae943ad63c4d6b.jpg" alt="Model on a striped lounge chair in a taupe fur coat and black suede long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.03</figcaption></figure>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 140px 48px 0 0">
+    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/72d9fc3f51f54b14c2af126edf8e6e0a.jpg" alt="Model walking past a terracotta facade in a brown fur jacket, grey tights and long boots" style="display: block; width: 100%; height: auto"></figure>
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px; display: flex; flex-direction: column; gap: 48px">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+      <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/cfd10c8fedee37f9694862509736d394.jpg" alt="Model on a cream curved sofa in a charcoal chunky knit and long boots" style="display: block; width: 100%; height: auto"><figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.04 — I.05</figcaption></figure>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 120px">
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/b9b20d4e4aa9fb47a9fb3238e73db348.jpg" alt="Model before a black lacquered door in a charcoal coat, white fringed scarf and long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.06</figcaption></figure>
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/463e282b9bf1f55e3e9138a818df8b21.jpg" alt="Model leaning on a stone wall on a Paris avenue in a brown jacket, cream scarf and long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.07</figcaption></figure>
+  </div>
+  <div style="height: 100px"></div>
+</section>
+<!-- SeasonWinter2V2 -->
+<section style="width: 100%; box-sizing: border-box; background: #E6EBEF; color: #1A2028; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 40px 48px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>(004) — Chapter I · Second Release</span><span style="color: #4F5964">erial carob — Winter</span>
+  </div>
+  <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/b67c59657204be4e31f21ae05f908e86.jpg" alt="Model crouching in a snowy studio in a white faux fur jacket and shearling-lined black winter boots, one cuff folded down" style="display: block; width: 100%; height: auto"></figure>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 96px 48px 72px 48px">
+    <div>
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4F5964">Black Leather — Shearling Cuff</p>
+      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Winter Boots<span style="color: #E6007E">.</span></span></p>
+    </div>
+    <div style="max-width: 340px">
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4F5964">Worn tall with the shearling cuff up, or folded down to show the lining.</p>
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">Looks I.08 — I.15</p>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 0 0 0 48px">
+    <figure style="flex: 1 1 300px; min-width: 0; max-width: 420px; margin: 0"><img loading="lazy" decoding="async" src="assets/61abc80bb2ebbe0a0da27cbd1a0fc27c.jpg" alt="Model on a stone bench by a column in a grey shearling-lined coat with boot cuffs folded down" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.09 — Cuff down</figcaption></figure>
+    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/b17b2e2d6231896bf996ec0cf735ed9a.jpg" alt="Model on a wooden bench outside a Paris café in a brown shearling jacket and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.10</figcaption></figure>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 140px">
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/d2932042c27c8276a74197ee746b9f7d.jpg" alt="Model walking past a concrete wall in a black puffer, red scarf and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.11</figcaption></figure>
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/423183cad21ea510e476c3b949f19969.jpg" alt="Model on a steel bench in a black puffer and red hood scarf, boot cuffs folded down" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.12</figcaption></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 140px 48px 0 48px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/13d8813c50556b19bca2746d4fde08e8.jpg" alt="Model leaning on a stone pillar in a long black coat, leather gloves and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.13</figcaption></figure>
+    <figure style="margin: 160px 0 0 0"><img loading="lazy" decoding="async" src="assets/2ba1efb3ddb7bc396e706bce3e52b5e2.jpg" alt="Model against a stone wall in a cream coat and scarf with a brown bag and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.14</figcaption></figure>
+    <figure style="margin: 80px 0 0 0"><img loading="lazy" decoding="async" src="assets/b8f2e741ad7588c99be00da1ecd4291e.jpg" alt="Model in a brick-walled loft in a cream coat, ribbed knit skirt and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.15</figcaption></figure>
+  </div>
+  <p style="margin: 120px 48px 0 48px; text-align: right; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+  <div style="height: 120px"></div>
+</section>
+<!-- SeasonAutumnV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="padding: 140px 48px 72px 48px">
+    <div style="display: flex; justify-content: space-between; gap: 16px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+      <span>(005) — Chapter II</span>
+      <span style="color: #A6A6A6">erial carob — Autumn Release</span>
+    </div>
+    <h2 style="margin: 24px 0 0 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(120px, 20vw, 280px); line-height: 0.9; letter-spacing: -0.02em">Autumn<span style="color: #E6007E">.</span></h2>
+    <p style="margin: 36px 0 0 0; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase">Ankle Brontë Nubuck French Western Boots</p>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 4px">
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/58da4f14d624458f00d1c4f2fa6fa5bf.jpg" alt="Model seated on a dark Windsor chair in a leather jacket, light jeans and brown nubuck western boots" style="display: block; width: 100%; height: auto">
+      <figcaption style="padding: 14px 20px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">II.01 — Studio — Brown</figcaption>
+    </figure>
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/91ea84e008bfd0d0de80037a3068cbac.jpg" alt="Model seated on a wooden stairwell in a black leather jacket, light jeans and nubuck western boots" style="display: block; width: 100%; height: auto">
+      <figcaption style="padding: 14px 20px; text-align: right; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">II.02 — Stairwell — Brown</figcaption>
+    </figure>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 48px; padding: 120px 48px 120px 48px">
+    <div style="flex: 1 1 220px; min-width: 0; max-width: 300px">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.3">A quiet confidence, carried through every step.</p>
+      <p style="margin: 18px 0 0 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">Looks II.01 — II.09</p>
+    </div>
+    <figure style="flex: 0 1 600px; min-width: 280px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/07bebe325d78b86dbe4879de220feab8.jpg" alt="Model reclining on a chrome cantilever chair with tan nubuck western boots raised" style="display: block; width: 100%; height: auto">
+    </figure>
+    <ol style="flex: 1 1 220px; min-width: 0; max-width: 260px; margin: 0; padding: 16px 0 0 0; list-style: none; border-top: 1px solid #FFFFFF; font-size: 12px; line-height: 2; letter-spacing: 0.08em; color: #D9D9D9">
+      <li>II.03 — Studio — Tan</li>
+      <li>II.04 — Kitchen — Black</li>
+      <li>II.05 — Bedroom — Black</li>
+      <li>II.06 — Studio — Black</li>
+      <li>II.07 — Park — Black</li>
+      <li>II.08 — Street — Brown</li>
+      <li>II.09 — Stone wall — Black</li>
+    </ol>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/3219c91745bf73fd051ae9c8661257be.jpg" alt="Model crouching by an open fridge in black boots and a ribbed knit" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.04</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/db7acf877bcea611c7c5aaaa92cff405.jpg" alt="Model in headphones on a cane armchair with black western boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.05</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/8d6c571c05fa4b6b8078e14e4e0e29f2.jpg" alt="Fisheye shot of model crouching in a white studio in black western boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.06</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/42da4e4e0ab747f06d5522bc953b7980.jpg" alt="Model drinking coffee on a park bench in black western boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.07</figcaption></figure>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 48px; padding: 120px 48px 140px 0">
+    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/22858e818d1ecfed517cb71639814311.jpg" alt="Model seated on a night street pavement in a leather jacket and brown western boots" style="display: block; width: 100%; height: auto">
+      <figcaption style="padding: 14px 0 0 48px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.08</figcaption>
+    </figure>
+    <figure style="flex: 0 1 420px; min-width: 240px; margin: 240px 0 0 0">
+      <img loading="lazy" decoding="async" src="assets/27cf43917fbff49ae1f4a35fedac1af8.jpg" alt="Model leaning on a sunlit stone wall with a black leather bag and black western boots" style="display: block; width: 100%; height: auto">
+      <figcaption style="margin-top: 14px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.09</figcaption>
+      <p style="margin: 64px 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+    </figure>
+  </div>
+</section>
+<!-- SeasonAutumn2V2 -->
+<section style="width: 100%; box-sizing: border-box; background: #D8CDBF; color: #2A211C; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 120px 48px 56px 48px">
+    <div>
+      <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(005) — Chapter II · Accessories</p>
+      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(96px, 15vw, 210px); line-height: 0.9; letter-spacing: -0.02em">Mumu Bag<span style="color: #E6007E">.</span></h2>
+    </div>
+    <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5A4A3E">erial carob — Autumn · Black Brown</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px">
+    <figure style="margin: 0; overflow: hidden; grid-column: span 2; grid-row: span 2;"><img loading="lazy" decoding="async" src="assets/07fc520dcedbb5beaeac6ff92e4f0438.jpg" alt="Model glancing back in a pale blue store, camel blazer and Mumu bag on the shoulder" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/60e8c5344f8cd5ca089fc6d5f48591f0.jpg" alt="Mirror selfie in a camel blazer carrying the Mumu bag" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/601eed9d49a71dda703a553a3e769731.jpg" alt="Model climbing a stairwell with the Mumu bag over a camel blazer" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4; grid-column: 1; grid-row: 1;"><img loading="lazy" decoding="async" src="assets/8f03796eeb0ecfca73daee27a2718161.jpg" alt="Model crouched by a wrought-iron gate holding the Mumu bag" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4; grid-column: 1; grid-row: 2;"><img loading="lazy" decoding="async" src="assets/8c6bdbfd8de748c9fd6dd9ba8ed8d78a.jpg" alt="Model leaning on a concrete pillar holding the Mumu bag" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; grid-column: 2 / span 2; grid-row: 1 / span 2;"><img loading="lazy" decoding="async" src="assets/f793c5fa21b373172c0b51124b20d64a.jpg" alt="Model seated on granite steps with the Mumu bag on her lap" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/95389fb960bcd5be8077f7637d3036c6.jpg" alt="Model on a Paris street in a camel knit and scarf with the Mumu bag" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/b359f262b7ea8629b14a76ebd8e89b64.jpg" alt="Model descending grated steps with the Mumu bag" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/a8c763158a6bcf77927009b518b132bf.jpg" alt="Model seated on concrete steps in a camel knit with the Mumu bag on the shoulder" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.12); transform-origin: 0 0"></figure>
+  </div>
+</section>
+<!-- SeasonSummerV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #F2F0EC; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 80px 48px">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
+      <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px">(006) — Chapter III</span>
+      <span style="display: block; font-size: clamp(110px, 17vw, 240px); font-style: italic">Summer<span style="color: #E6007E">.</span></span>
+    </h2>
+    <div style="max-width: 380px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">erial carob — Summer Release</p>
+      <ul style="margin: 14px 0 0 0; padding: 0; list-style: none; font-family: 'Cormorant Garamond', serif; font-size: 26px; line-height: 1.25">
+        <li>Round-Neck Drawing Long-Sleeve Tee</li>
+        <li>Natural-Neck Graphic Long-Sleeve Tee</li>
+        <li>Off-Shoulder Long-Sleeve Tee</li>
+        <li>Ribbed Scoop-Neck Slim Tee</li>
+      </ul>
+      
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 0 48px 0 0">
+    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/95a82995a5d6a0374d90dedb54722ef5.jpg" alt="Model on a stairway with a mint railing, holding purple roses and a black leather jacket, wearing the red ribbon tee" style="display: block; width: 100%; height: auto">
+    </figure>
+    <div style="flex: 1 1 280px; min-width: 0; max-width: 360px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0 0 8px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">01</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Red Ribbon</span></p>
+      <img loading="lazy" decoding="async" src="assets/a67de6016bfe69abbd04c4c29cac79b4.jpg" alt="Model holding a door handle in the red ribbon tee and white cargo trousers" style="display: block; width: 100%; height: auto">
+      <img loading="lazy" decoding="async" src="assets/dc06b555234a2d55c5febec06a277d00.jpg" alt="Mirror selfie in the red ribbon tee with a knit tied at the waist" style="display: block; width: 100%; height: auto">
+      <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.01 — III.03</p>
+    </div>
+  </div>
+
+  <div style="padding: 140px 0 0 0">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 0 48px 28px 48px">
+      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">02</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Ugly Apple</span></p>
+      <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.04 — III.07</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; align-items: start">
+      <img loading="lazy" decoding="async" src="assets/975bc65b6efe9527730dd6ef2924d9ae.jpg" alt="Model leaning on a wood-panelled wall in the Ugly Apple tee" style="display: block; width: 100%; height: auto">
+      <img loading="lazy" decoding="async" src="assets/1918a6222f52d1af6dced98104c2f74e.jpg" alt="Model eating a pastry by a café window in the Ugly Apple tee" style="display: block; width: 100%; height: auto">
+      <img loading="lazy" decoding="async" src="assets/27f1754b4553fa7de0731ef895a169d4.jpg" alt="Model seated on a wooden bench by glass doors in the Ugly Apple tee" style="display: block; width: 100%; height: auto">
+      <img loading="lazy" decoding="async" src="assets/813bcf6d148e3d8e40ef8dd5a7e6915f.jpg" alt="Model standing before a white sofa in the Ugly Apple tee" style="display: block; width: 100%; height: auto">
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px; padding: 140px 48px 0 48px">
+    <figure style="flex: 0 1 600px; min-width: 280px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/b4b0c9e6f4a329f5ef61d9010a3a6ead.jpg" alt="Back view of the model showing the stamp print on the long-sleeve tee" style="display: block; width: 100%; height: auto">
+    </figure>
+    <div style="flex: 1 1 360px; min-width: 0">
+      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">03</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Stamp</span></p>
+      <p style="margin: 16px 0 40px 0; font-size: 14px; line-height: 1.6; color: #5C5C5C">Small chest motif at the front, stamp print across the back.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: end">
+        <figure style="margin: 0"><div><img loading="lazy" decoding="async" src="assets/b54a178875e331bc21e2963275a3becd.webp" alt="Front flat lay of the stamp tee with a small dove and ribbon chest motif" style="display: block; width: 100%; height: auto"></div><figcaption style="margin-top: 10px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Front</figcaption></figure>
+        <figure style="margin: 0"><div><img loading="lazy" decoding="async" src="assets/01f050fd93f871cb1076b38658f66185.webp" alt="Back flat lay of the stamp tee" style="display: block; width: 100%; height: auto"></div><figcaption style="margin-top: 10px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Back</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 48px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/a9ad099d09f05bfaa6cec0e24caeb74a.jpg" alt="Model with a coffee cup in a yellow café wearing the stamp tee and black cropped trousers" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.08</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/c411976695718b470494e42d6f3841fc.jpg" alt="Studio portrait in the stamp tee against a white wall" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.09</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/13d027067e27bc995d7d728357ccb4f9.jpg" alt="Model in sunglasses posing by a grey carved door in the stamp tee and slingback heels" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.10</figcaption></figure>
+  </div>
+
+</section>
+<!-- SeasonSummer2V2 -->
+<section style="width: 100%; box-sizing: border-box; background: #F2F0EC; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 48px; padding: 120px 0 0 48px">
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Natural-Neck Graphic Long-Sleeve Tee</p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">04</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Sparkle</span></p>
+      <p style="margin: 16px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.11 — III.13</p>
+      <div style="margin-top: 72px; max-width: 340px"><img loading="lazy" decoding="async" src="assets/a2d3045c5de008a41d837832b8826d3e.webp" alt="Natural-neck graphic long-sleeve tee with the Sparkle apple print, cutout" style="display: block; width: 100%; height: auto"></div>
+      <p style="margin: 72px 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+    </div>
+    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/24a7e6cc52ff044fffa3c3e6a040aee0.jpg" alt="Model shading her eyes under a brick arcade in the radiant apple tee, navy shorts and brown boots" style="display: block; width: 100%; height: auto">
+    </figure>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px">
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/94d6006516afc8b907d5a0d8c9d4ebba.jpg" alt="Model holding a green juice by an arched wooden door in the radiant apple tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/5b7774b52fdbf0cba6246dee609e00b1.jpg" alt="Model seated at a wooden table by a brick wall in the radiant apple tee with a red knit" style="display: block; width: 100%; height: auto"></figure>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 160px 0 0 48px">
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Off-Shoulder Long-Sleeve Tee</p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">05</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Angel</span></p>
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.14 — III.17</p>
+      <div style="margin-top: 72px; max-width: 340px"><img loading="lazy" decoding="async" src="assets/b7b20d781988dca36000da2a568a1c6b.webp" alt="Off-shoulder long-sleeve tee with the angel and apple print, cutout" style="display: block; width: 100%; height: auto"></div>
+    </div>
+    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/942bbc1423748b3a4f8a592376884e77.jpg" alt="Model standing on sand before a pale wall in the off-shoulder angel tee and polka-dot shorts" style="display: block; width: 100%; height: auto"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 48px 48px 0 48px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/c112d5a9ea3dc5088e7f1db515fa34dd.jpg" alt="Model with a rangefinder camera leaning on a street pillar in the angel tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: 160px 0 0 0"><img loading="lazy" decoding="async" src="assets/47b66dff0fbc39d00dff6489331dc230.jpg" alt="Model holding a compact camera against a white-tiled wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: 80px 0 0 0"><img loading="lazy" decoding="async" src="assets/eda84704ff039de2f2e72cda05a9079e.jpg" alt="Model checking her phone by a brick wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
+  </div>
+
+  <div style="padding: 160px 0 0 0">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 0 48px 32px 48px">
+      <div><p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Ribbed Scoop-Neck Slim Tee</p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">06</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Fade</span></p>
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.18 — III.22</p></div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px">
+      <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/b236c83c7f995286aba3d2bdf9960017.jpg" alt="Model drinking water on a wooden bench in the ribbed fade tee and denim skirt" style="display: block; width: 100%; height: auto"></figure>
+      <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/a9480104de76f942a3815861825fb066.jpg" alt="Model in glasses perched on a white armchair in the ribbed fade tee" style="display: block; width: 100%; height: auto"></figure>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin-top: 4px; align-items: center">
+      <figure style="margin: 0; padding: 32px"><img loading="lazy" decoding="async" src="assets/30cd5f0fe5fd9e56db652678a44e5b5e.webp" alt="Ribbed scoop-neck slim tee with the faded apple trio print, cutout" style="display: block; width: 100%; height: auto"></figure>
+      <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/e67ad0c956fc7c4abad4b21bc06781ce.jpg" alt="Model taking a selfie on a stone bench in the ribbed fade tee" style="display: block; width: 100%; height: auto"></figure>
+      <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/f435b1d99df4dcabb72187bc91ecb34d.jpg" alt="Mirror selfie in the ribbed fade tee with a denim mini skirt" style="display: block; width: 100%; height: auto"></figure>
+      <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/99de0b88813be2c2f9424004373fa2ad.jpg" alt="Model tilting her head on a side street in the ribbed fade tee holding a denim jacket" style="display: block; width: 100%; height: auto"></figure>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 48px; padding: 160px 48px 0 0">
+    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/2aaf3e2106ef812918facd923037f45a.jpg" alt="Studio portrait in the ribbed grey apple tee and light jeans" style="display: block; width: 100%; height: auto"></figure>
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Ribbed Scoop-Neck Slim Tee</p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">07</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Grey Apple</span></p>
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.23 — III.26</p>
+      <div style="margin-top: 72px; max-width: 360px"><img loading="lazy" decoding="async" src="assets/2bd67b6f3d98f662429ff69a6d77ab88.webp" alt="Ribbed scoop-neck slim tee with the grey ribbon apple print, cutout" style="display: block; width: 100%; height: auto"></div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 48px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/5f395a8db03eceb6683e7e85819eb662.jpg" alt="Model leaning on a weathered white wall in the grey apple tee and light jeans" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/4afb2b6b6339a0b780e77f95303c43cd.jpg" alt="Model in sunlight against a rusted steel wall in the grey apple tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/23ab2afa42321486db722c9ad690bebf.jpg" alt="Model taking a selfie by a travertine wall in the grey apple tee" style="display: block; width: 100%; height: auto"></figure>
+  </div>
+  <div style="height: 120px"></div>
+</section>
+<!-- SeasonSummer3V2 -->
+<section style="width: 100%; box-sizing: border-box; background: #E6E5E1; color: #141414; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 120px 48px 0 48px">
+    <div>
+      <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(006) — Chapter III · Accessories</p>
+      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(80px, 11vw, 160px); line-height: 0.9; letter-spacing: -0.02em"><span style="display: block">Filet</span><span style="display: block; padding-left: 0.5em; font-style: italic">Classic Belt<span style="color: #E6007E">.</span></span></h2>
+    </div>
+    <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A4A48">erial carob — Summer</p>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 64px 48px 20px 48px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #141414"></span>Black</div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/ea3d16b99d6818b2d3a0541e9bd127e0.jpg" alt="Model walking a night street in a white tank, wide jeans and the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/ba302a60a9ed2ac775e72d4b3a855094.jpg" alt="Model laughing in a dressing room in a white tank, washed jeans and the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin-top: 4px">
+    <figure style="margin: 0; overflow: hidden; grid-column: span 2; grid-row: span 2;"><img loading="lazy" decoding="async" src="assets/3863d60b68e9bcab97986ca5f0a000fb.jpg" alt="Model by a turntable in a white blouse, linen trousers and the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/31dfa412db74e534cab15944222352e8.jpg" alt="Model in a hotel room adjusting washed jeans with the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/9edffeb45ca96d680a0de7cdfea54545.jpg" alt="Smocked white blouse and linen trousers with the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/708e787ad5dc447d8940b7da7d1a2303.jpg" alt="Smocked blouse and black belt on a sunlit terrace" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/94ded3c2352fdd3d75e67e0b9f5bd391.jpg" alt="Pintucked blouse and black belt against a white wall at sunset" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 64px 48px 20px 48px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6B1F2A"></span>Burgundy</div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/50a8fc803ec59d6a68e1883d71ca9530.jpg" alt="Grey rib tank and white mini skirt with the burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/4eed352f597c6981a8e4a5be443995b0.jpg" alt="Model with hands on hips in a grey tank and burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/e2cc8e73b8b3e13d47c4a0591b5a424f.jpg" alt="Full-length look in a grey tank, white mini, burgundy belt and loafers" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; margin-top: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/2993135a577e32eda41450280ff17d5d.jpg" alt="Model on stone steps in a pink striped tee, raw denim and burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/23ada16fcaee81a88359e0eb80bf7747.jpg" alt="Model in a heathered pink ringer tee and raw denim with the burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 4px">
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/6586fa71ba8bf78a89c52f2560a60153.jpg" alt="Model seated on the studio floor in a grey tank and burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/c83baf8ec5870c6edc12fdf97057e750.jpg" alt="Model seated on a white floor in a striped pink tee with the burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+    <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/cea8a1a0f53fef9ca86c2854d3a206c6.jpg" alt="Profile in a pink rib tee, raw denim and burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
+  </div>
+</section>
+<!-- SeasonSpringV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 80px 48px">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
+      <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px">(007) — Chapter IV</span>
+      <span style="display: block; font-size: clamp(110px, 17vw, 240px); font-style: italic">Spring<span style="color: #E6007E">.</span></span>
+    </h2>
+    <div style="max-width: 360px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">erial carob — Spring Release</p>
+      <p style="margin: 14px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 34px; line-height: 1.1">Manon Semi-Overfit Shirt</p>
+      
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px">
+    <figure style="flex: 0 1 840px; min-width: 300px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/d936a5489b2363c63f1d4b8f71f4d544.jpg" alt="Full-length studio look in a white textured shirt, cream pleated trousers and a brown shoulder bag" style="display: block; width: 100%; height: auto">
+    </figure>
+    <figure style="flex: 1 1 280px; min-width: 0; max-width: 400px; margin: 0 48px 0 0">
+      <img loading="lazy" decoding="async" src="assets/ef384b8a1f8cd076c3dae55469d76d75.jpg" alt="Close portrait in a light grey textured shirt against a white wall" style="display: block; width: 100%; height: auto">
+      <figcaption style="margin-top: 14px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">IV.01 — White · IV.02 — Grey</figcaption>
+    </figure>
+  </div>
+  <div style="padding: 120px 48px 0 48px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-bottom: 1px solid #0A0A0A; padding-bottom: 18px">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">Colourways</p>
+      <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Manon Semi-Overfit Shirt</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; align-items: start">
+      <figure style="margin: 0">
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">Black</p>
+        <img loading="lazy" decoding="async" src="assets/2a78358290fc76d775ff8121c5631578.jpg" alt="Black textured shirt worn open over a white tank with black jeans in a studio" style="display: block; width: 100%; height: auto">
+        <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.03</figcaption>
+      </figure>
+      <figure style="margin: 0">
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">White</p>
+        <img loading="lazy" decoding="async" src="assets/1a93749c2fcfcd05d2c3082b179ac37e.jpg" alt="White textured shirt with light jeans, model leaning on a white wall by a staircase" style="display: block; width: 100%; height: auto">
+        <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.04</figcaption>
+      </figure>
+      <figure style="margin: 0">
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">Grey</p>
+        <img loading="lazy" decoding="async" src="assets/583bca7f9cbc464fb38db5b539a889f3.jpg" alt="Light grey shirt with a grey skirt and knee boots beside a spiral staircase" style="display: block; width: 100%; height: auto">
+        <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.05</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 140px 0 0 48px">
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 400px; display: flex; flex-direction: column; gap: 56px">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+      <figure style="margin: 0">
+        <img loading="lazy" decoding="async" src="assets/6b575ead7ed6d1600b8cbaaaa839e20b.jpg" alt="Grey striped shirt with a green knit tied at the waist, model in a fitting room with white curtains" style="display: block; width: 100%; height: auto">
+        <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.06</figcaption>
+      </figure>
+    </div>
+    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+      <img loading="lazy" decoding="async" src="assets/e847579c0dd27a3d0dfa105c3eea6ff2.jpg" alt="Black shirt with a grey knit over the shoulders, white shorts and black knee boots in a concrete room" style="display: block; width: 100%; height: auto">
+      <figcaption style="padding: 12px 48px 0 0; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.07</figcaption>
+    </figure>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 120px; align-items: start">
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/1522ab3b68054f2d2c45a7701d31a675.jpg" alt="White shirt with a brown knit over the shoulders in a café" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.08 — White</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/4f857c84d7c94b377428647a8761d371.jpg" alt="White shirt layered under an olive jacket with wide jeans on a stairwell" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.09 — White</figcaption></figure>
+    <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/355c7758992e58a010bea3bcfc226c6a.jpg" alt="Full-length black shirt look with black flared jeans and patent pumps in a studio" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.10 — Black</figcaption></figure>
+  </div>
+  <div style="height: 120px"></div>
+</section>
+<!-- S06ProductV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0F0F0F; color: #F2F2F0; font-family: 'Archivo', sans-serif; padding: 140px 48px 160px 48px; overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+    <div>
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(008) — Model Comp Cards</p>
+      <h2 style="margin: 32px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(80px, 12vw, 170px); line-height: 0.9; letter-spacing: -0.02em">
+        <span style="display: block">The</span><span style="display: block; padding-left: 0.6em; font-style: italic">Faces<span style="color: #E6007E">.</span></span>
+      </h2>
+    </div>
+    <div style="max-width: 360px; text-align: right">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.25">Three original AI models, cast for erial carob.</p>
+      <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A9A9A">Created by EO Visual Studio</p>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 96px; align-items: start">
+    <figure style="margin: 0">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">01</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <img loading="lazy" decoding="async" src="assets/837f7d8955902e3a53c945978c7674b9.png" alt="Studio headshot of AI model Yujin" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
+      <figcaption style="margin-top: 20px">
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Yujin</p>
+        <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Black, blunt fringe</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Brown</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Skin</dt><dd style="margin: 0; text-align: right">Soft blush, clean skin</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Featured in</dt><dd style="margin: 0; text-align: right">Winter · Spring</dd></div>
+        </dl>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">02</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <img loading="lazy" decoding="async" src="assets/4f35460f9dfd71d84eda30d72141fa16.png" alt="Studio headshot of AI model Eva" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
+      <figcaption style="margin-top: 20px">
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Eva</p>
+        <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Light brown, long</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Grey-green</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Skin</dt><dd style="margin: 0; text-align: right">Freckled, bare skin</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Featured in</dt><dd style="margin: 0; text-align: right">All Four Seasons — Main Model</dd></div>
+        </dl>
+      </figcaption>
+    </figure>
+    <figure style="margin: 0">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">03</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <img loading="lazy" decoding="async" src="assets/2dfb6dce3dacbfd0991dd45c32c316ec.png" alt="Studio headshot of AI model Jane" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
+      <figcaption style="margin-top: 20px">
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Jane</p>
+        <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Black, long layers</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Brown</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Skin</dt><dd style="margin: 0; text-align: right">Freckled, bare skin</dd></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Featured in</dt><dd style="margin: 0; text-align: right">Winter · Summer</dd></div>
+        </dl>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+<!-- S09CreditsV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #F2F0EC; font-family: 'Archivo', sans-serif; padding: 140px 48px 140px 48px; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>(009)</span>
+    <span style="color: #8C8C8C">Credits</span>
+  </div>
+  <h2 style="margin: 56px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(64px, 9vw, 128px); line-height: 0.92; letter-spacing: -0.02em">Creative Production<br><span style="font-style: italic">by EO</span><span style="color: #E6007E">.</span></h2>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; margin: 96px 0 0 0">
+    <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
+      <p style="margin: 0 0 10px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">프로젝트</p>
+      <p style="margin: 0; font-size: 18px">에리얼카럽 — Four Seasons 캠페인</p>
+    </div>
+    <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
+      <p style="margin: 0 0 10px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">직책</p>
+      <p style="margin: 0; font-size: 18px">인하우스 디자이너</p>
+    </div>
+    <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
+      <p style="margin: 0 0 14px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">담당 역할</p>
+      
+        <p style="margin: 0 0 8px 0; font-size: 18px">크리에이티브 디렉션</p>
+      
+        <p style="margin: 0 0 8px 0; font-size: 18px">AI 이미지 제작</p>
+      
+        <p style="margin: 0 0 8px 0; font-size: 18px">AI 패션 필름 제작</p>
+      
+        <p style="margin: 0 0 8px 0; font-size: 18px">그래픽 디자인</p>
+      
+    </div>
+    <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
+      <p style="margin: 0 0 14px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">사용 도구</p>
+      
+        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+          <span>AI 이미지</span><span style="color: #8C8C8C">Nano Banana</span>
+        </div>
+      
+        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+          <span>AI 영상</span><span style="color: #8C8C8C">Veo · Higgsfield · Seedance 2.5</span>
+        </div>
+      
+        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+          <span>그래픽 · 편집</span><span style="color: #8C8C8C">Photoshop · Illustrator · CapCut</span>
+        </div>
+      
+    </div>
+  </div>
+
+  <div style="margin: 72px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A">
+    <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">제작 과정</p>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+      
+        <div>
+          <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 0.12em; color: #E6007E">01</p>
+          <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 19px; font-weight: 500; line-height: 1.4">콘셉트 기획</p>
+        </div>
+      
+        <div>
+          <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 0.12em; color: #E6007E">02</p>
+          <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 19px; font-weight: 500; line-height: 1.4">비주얼 디렉션</p>
+        </div>
+      
+        <div>
+          <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 0.12em; color: #E6007E">03</p>
+          <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 19px; font-weight: 500; line-height: 1.4">AI 이미지 제작</p>
+        </div>
+      
+        <div>
+          <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 0.12em; color: #E6007E">04</p>
+          <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 19px; font-weight: 500; line-height: 1.4">AI 필름 제작</p>
+        </div>
+      
+        <div>
+          <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 0.12em; color: #E6007E">05</p>
+          <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 19px; font-weight: 500; line-height: 1.4">최종 캠페인</p>
+        </div>
+      
+    </div>
+  </div>
+
+  <div style="margin: 72px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A; display: grid; grid-template-columns: 1fr 2fr; gap: 64px">
+    <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">작업 범위</p>
+    <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.8; max-width: 680px">이 포트폴리오의 모든 AI 이미지와 AI 패션 필름은 EO가 직접 기획·디렉팅하고 제작했습니다. 브랜드와 제품, 컬렉션의 권리는 에리얼카럽에 있습니다.</p>
+  </div>
+</section>
+<!-- S10ContactV2 -->
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; padding: 120px 48px 48px 48px; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+    <span>(010)</span>
+    <span style="color: #A6A6A6">Contact</span>
+  </div>
+  <h2 style="margin: 40px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em; position: relative">
+    <span style="display: block; font-size: clamp(180px, 34vw, 480px)">EO</span>
+    <span style="display: block; margin: -0.35em 0 0 2.2em; font-style: italic; font-size: clamp(56px, 9vw, 128px); letter-spacing: -0.02em; color: #E6007E">Visual Studio</span>
+  </h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 64px; margin-top: 96px; padding-top: 32px; border-top: 1px solid #FFFFFF">
+    <div style="flex: 1 1 360px; min-width: 0">
+      <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">Made with Claude</p>
+      <p style="margin: 24px 0 0 0; font-family: 'Noto Sans KR', sans-serif; font-size: 22px; font-weight: 300; line-height: 1.6; max-width: 460px">이 포트폴리오는 모두 클로드로 제작되었습니다.</p>
+    </div>
+    <ul style="flex: 1 1 260px; min-width: 0; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 2.1; letter-spacing: 0.06em; color: #D9D9D9">
+      <li>AI 패션 캠페인</li>
+      <li>AI 패션 에디토리얼</li>
+      <li>AI 제품 비주얼</li>
+      <li>AI 패션 필름</li>
+      <li>크리에이티브 디렉션</li>
+    </ul>
+    <dl style="flex: 1 1 300px; min-width: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+      <div style="grid-column: span 2"><dt style="color: #A6A6A6">이메일</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">rladjwls0682@gmail.com</dd></div>
+      <div><dt style="color: #A6A6A6">인스타그램</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">@eo_visual.studio</dd></div>
+      <div><dt style="color: #A6A6A6">비핸스</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">behance.net/3ae033e5</dd></div>
+      <div><dt style="color: #A6A6A6">활동 지역</dt><dd style="margin: 8px 0 0 0">서울, 대한민국</dd></div>
+      <div style="grid-column: span 2"><a href="#contact" style="display: inline-flex; align-items: center; gap: 14px; min-height: 44px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #FFFFFF; text-decoration: none; border-bottom: 1px solid #E6007E">프로젝트 문의하기<span style="display: inline-block; width: 40px; height: 1px; background: #FFFFFF"></span></a></div>
+    </dl>
+  </div>
+  <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 120px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">
+    <span>© 2026 EO Visual Studio</span>
+    <span>끝까지 봐 주셔서 감사합니다</span>
+  </footer>
+</section>
+</div>
+</section>
+
+<section id="y2025" role="tabpanel" aria-labelledby="tab-2025" hidden>
+<div class="wrap">
+<figure class="page"><img data-src="pages/p01.jpg" width="1600" height="900" alt="2025 포트폴리오 1쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p02.jpg" width="1600" height="900" alt="2025 포트폴리오 2쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p03.jpg" width="1600" height="1020" alt="2025 포트폴리오 3쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p04.jpg" width="1600" height="1090" alt="2025 포트폴리오 4쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p05.jpg" width="1600" height="628" alt="2025 포트폴리오 5쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p06.jpg" width="1600" height="4398" alt="2025 포트폴리오 6쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p07.jpg" width="1600" height="2932" alt="2025 포트폴리오 7쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p08.jpg" width="1600" height="2022" alt="2025 포트폴리오 8쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p09.jpg" width="1600" height="4187" alt="2025 포트폴리오 9쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p10.jpg" width="1600" height="1090" alt="2025 포트폴리오 10쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p11.jpg" width="1600" height="2331" alt="2025 포트폴리오 11쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p12.jpg" width="1600" height="1447" alt="2025 포트폴리오 12쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p13.jpg" width="1600" height="2319" alt="2025 포트폴리오 13쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p14.jpg" width="1600" height="3592" alt="2025 포트폴리오 14쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p15.jpg" width="1600" height="1090" alt="2025 포트폴리오 15쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p16.jpg" width="1600" height="3536" alt="2025 포트폴리오 16쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p17.jpg" width="1600" height="1962" alt="2025 포트폴리오 17쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p18.jpg" width="1600" height="2918" alt="2025 포트폴리오 18쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p19.jpg" width="1600" height="1090" alt="2025 포트폴리오 19쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p20.jpg" width="1600" height="2970" alt="2025 포트폴리오 20쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p21.jpg" width="1600" height="3094" alt="2025 포트폴리오 21쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p22.jpg" width="1600" height="2229" alt="2025 포트폴리오 22쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p23.jpg" width="1600" height="1090" alt="2025 포트폴리오 23쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p24.jpg" width="1600" height="3690" alt="2025 포트폴리오 24쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p25.webp" width="979" height="2000" alt="2025 포트폴리오 25쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p26.jpg" width="1600" height="1870" alt="2025 포트폴리오 26쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p27.jpg" width="1600" height="900" alt="2025 포트폴리오 27쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p28.jpg" width="1600" height="900" alt="2025 포트폴리오 28쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p29.jpg" width="1600" height="417" alt="2025 포트폴리오 29쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p30.jpg" width="1600" height="900" alt="2025 포트폴리오 30쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p31.jpg" width="1600" height="898" alt="2025 포트폴리오 31쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p32.jpg" width="1600" height="900" alt="2025 포트폴리오 32쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p33.jpg" width="1600" height="900" alt="2025 포트폴리오 33쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p34.jpg" width="1600" height="900" alt="2025 포트폴리오 34쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p35.jpg" width="1600" height="900" alt="2025 포트폴리오 35쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p36.jpg" width="1600" height="983" alt="2025 포트폴리오 36쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p37.jpg" width="1600" height="983" alt="2025 포트폴리오 37쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p38.jpg" width="1600" height="2207" alt="2025 포트폴리오 38쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p39.jpg" width="1600" height="5341" alt="2025 포트폴리오 39쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p40.jpg" width="1600" height="2112" alt="2025 포트폴리오 40쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p41.jpg" width="1600" height="900" alt="2025 포트폴리오 41쪽" loading="lazy" decoding="async"></figure>
+<figure class="page"><img data-src="pages/p52.jpg" width="1600" height="900" alt="2025 포트폴리오 42쪽" loading="lazy" decoding="async"></figure>
+</div>
+</section>
+</main>
+
+<script>
+(function () {
+  var tabs = { '2026': document.getElementById('tab-2026'), '2025': document.getElementById('tab-2025') };
+  var panels = { '2026': document.getElementById('y2026'), '2025': document.getElementById('y2025') };
+  var count = document.getElementById('count');
+  var pages = Array.prototype.slice.call(document.querySelectorAll('#y2025 .page'));
+  var total = pages.length;
+  var base = document.baseURI;
+  var loaded = false;
+  function load2025() {
+    if (loaded) return; loaded = true;
+    document.querySelectorAll('#y2025 img[data-src]').forEach(function (img) {
+      try { img.src = new URL(img.getAttribute('data-src'), base).href; } catch (e) { img.src = img.getAttribute('data-src'); }
+    });
+  }
+
+  function select(year, fromHash) {
+    if (!tabs[year]) year = '2026';
+    Object.keys(tabs).forEach(function (y) {
+      var on = y === year;
+      tabs[y].setAttribute('aria-selected', on ? 'true' : 'false');
+      tabs[y].tabIndex = on ? 0 : -1;
+      panels[y].hidden = !on;
+    });
+    count.hidden = year !== '2025';
+    if (year === '2025') { count.textContent = '1 / ' + total; load2025(); }
+    document.querySelectorAll('#y2026 video').forEach(function (v) { if (year !== '2026') v.pause(); });
+    window.scrollTo(0, 0);
+  }
+
+  Object.keys(tabs).forEach(function (y) {
+    tabs[y].addEventListener('click', function () { select(y); });
+    tabs[y].addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        var next = y === '2026' ? '2025' : '2026';
+        select(next); tabs[next].focus();
+      }
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !panels['2025'].hidden) count.textContent = (pages.indexOf(e.target) + 1) + ' / ' + total;
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    pages.forEach(function (p) { io.observe(p); });
+  }
+
+  function fromHash() { select((location.hash || '').replace('#y', ''), true); }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
+</script>
+</body>
+</html>
