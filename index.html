@@ -51,6 +51,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 #y2026 [style*="text-transform: uppercase"] { line-height: 1.5; }
 #y2026 [style*="Noto Sans KR"] { letter-spacing: -0.01em; word-break: keep-all; }
 #y2026 figcaption { line-height: 1.5; }
+#y2026 { --k: 1; --f: 1; --t: 1; }
+#y2026 .wrap { overflow-x: hidden; }
+@media (max-width: 760px) {
+  #y2026 { --k: 0.42; --f: 0.4; --t: 0.72; }
+  #y2026 [style*="repeat(5, minmax(0, 1fr))"], #y2026 [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #y2026 [style*="repeat(3, minmax(0, 1fr)); gap: calc(32px"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #y2026 [style*="grid-template-columns: 1fr 2fr"], #y2026 [style*="repeat(2, minmax(0, 1fr)); gap: 0 calc(64px"] { grid-template-columns: minmax(0, 1fr) !important; }
+  #y2026 [style*="justify-content: space-between"] { flex-wrap: wrap; row-gap: 8px; }
+  #y2026 h2[style*="text-align: right"] { text-align: left !important; }
+  #y2026 [style*="letter-spacing: 0.12em"] { letter-spacing: 0.08em !important; }
+  #y2026 figure[style*="margin: calc("] { margin-top: 0 !important; }
+  .bar-in { gap: 4px 12px; }
+  .who span { display: none; }
+}
+
 
 #y2025 { background: var(--ground-2025); }
 #y2025 .wrap { max-width: 1600px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; padding-block: 0 48px; }
@@ -67,7 +82,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <button class="tab" role="tab" id="tab-2026" aria-controls="y2026" aria-selected="true" type="button">2026</button>
       <button class="tab" role="tab" id="tab-2025" aria-controls="y2025" aria-selected="false" type="button" tabindex="-1">2025</button>
     </div>
-    <span class="count" id="count" aria-live="polite" hidden></span>
   </div>
 </header>
 
@@ -76,7 +90,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <div class="wrap">
 <!-- S01CoverV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <header style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 32px 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+  <header style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: calc(32px * var(--k)) calc(24px * var(--k)); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>EO Visual Studio</span>
     <span style="color: #A6A6A6">AI Fashion Campaign · Editorial · Film</span>
     <span style="color: #A6A6A6">Four Seasons</span>
@@ -85,34 +99,34 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <figure style="margin: 0">
     <img src="assets/2f31a24d61756aa689dee098330dad25.jpg" alt="Model striding past a carved wooden door at night in a beige cropped trench, black leather skirt and tan nubuck western boots" style="display: block; width: 100%; height: auto">
   </figure>
-  <h1 style="margin: 0; padding: 40px 24px 0 24px">
+  <h1 style="margin: 0; padding: calc(40px * var(--k)) calc(24px * var(--k)) 0 calc(24px * var(--k))">
     <svg viewBox="0 0 1352 200" width="100%" role="img" aria-label="Four Seasons" style="display: block; overflow: visible">
       <text x="0" y="186" textLength="1352" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" font-family="'Cormorant Garamond', serif" font-size="282" font-weight="400" letter-spacing="-4">Four Seasons</text>
     </svg>
   </h1>
-  <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 48px 24px 40px 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+  <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: calc(48px * var(--k)) calc(24px * var(--k)) calc(40px * var(--k)) calc(24px * var(--k)); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>(001)</span>
     <span style="color: #A6A6A6">Winter — Autumn — Summer — Spring</span>
     <span style="display: flex; align-items: center; gap: 14px"><span style="display: inline-block; width: 64px; height: 1px; background: #E6007E"></span>Scroll</span>
   </footer>
 </section>
 <!-- S02OverviewV2 -->
-<section style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', 'Noto Sans KR', sans-serif; padding: 150px 48px 150px 48px; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<section style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', 'Noto Sans KR', sans-serif; padding: calc(150px * var(--k)) calc(48px * var(--k)) calc(150px * var(--k)) calc(48px * var(--k)); overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; gap: calc(48px * var(--k)); align-items: flex-start">
     <div style="flex: 1 1 220px; min-width: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
       <p style="margin: 0">(002)</p>
       <p style="margin: 8px 0 0 0">Project Overview</p>
     </div>
-    <h2 style="flex: 3 1 640px; min-width: 0; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 66px); line-height: 1.08; letter-spacing: -0.015em">
+    <h2 style="flex: 3 1 640px; min-width: 0; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(calc(36px * var(--f)), 4.6vw, 66px); line-height: 1.08; letter-spacing: -0.015em">
       Finding beauty in the everyday — a quiet sensibility that <span style="font-style: italic; color: #E6007E">deepens with time.</span>
     </h2>
   </div>
-  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; margin-top: 120px">
+  <div style="display: flex; flex-wrap: wrap; gap: calc(48px * var(--k)); align-items: flex-end; margin-top: 120px">
     <figure style="flex: 1 1 220px; min-width: 0; max-width: 300px; margin: 0">
       <img src="assets/889bafa083ca51c39c627da32c94e55c.jpg" alt="Model glancing back mid-stride in a taupe fur jacket with the black Mumu bag, red facade behind" style="display: block; width: 100%; height: auto">
       <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.14em; color: #5C5C5C">FIG. 01 — Mumu Bag, Winter</figcaption>
     </figure>
-    <div style="flex: 3 1 640px; min-width: 0; display: flex; flex-wrap: wrap; gap: 48px">
+    <div style="flex: 3 1 640px; min-width: 0; display: flex; flex-wrap: wrap; gap: calc(48px * var(--k))">
       <div style="flex: 1 1 260px; min-width: 0">
         <p style="margin: 0 0 18px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.01em">Concept</p>
         <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.85; color: #5C5C5C; word-break: keep-all">에리얼카럽이 추구하는 모던하고 절제된 감성을 바탕으로, 일상 속 자연스러운 스타일링과 계절마다 변화하는 분위기를 하나의 시각적 흐름으로 표현했습니다.</p>
@@ -121,7 +135,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <p style="margin: 0 0 18px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.01em">Creative Intent</p>
         <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.85; color: #5C5C5C; word-break: keep-all">AI 이미지와 영상 제작을 통해 브랜드의 일관된 아이덴티티를 유지하면서도, 사계절마다 다른 소재와 실루엣, 공간의 분위기를 감각적인 패션 비주얼로 확장하고자 했습니다.</p>
       </div>
-      <dl style="flex: 1 1 100%; margin: 24px 0 0 0; padding-top: 24px; border-top: 1px solid #0A0A0A; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+      <dl style="flex: 1 1 100%; margin: calc(24px * var(--k)) 0 0 0; padding-top: 24px; border-top: 1px solid #0A0A0A; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(24px * var(--k)); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
         <div><dt style="color: #5C5C5C">Client</dt><dd style="margin: 8px 0 0 0">erial carob — In-house Designer</dd></div>
         <div><dt style="color: #5C5C5C">Scope</dt><dd style="margin: 8px 0 0 0">Four Seasons · Stills · Film</dd></div>
         <div><dt style="color: #5C5C5C">Year</dt><dd style="margin: 8px 0 0 0">2025 — 2026</dd></div>
@@ -131,23 +145,23 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 </section>
 <!-- S07FilmV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 64px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(64px * var(--k)) calc(48px * var(--k))">
     <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
       <p style="margin: 0">(003)</p>
       <p style="margin: 8px 0 0 0; color: #A6A6A6">Seven films · Four seasons</p>
     </div>
     <h2 style="margin: 0; text-align: right; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
       <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px">AI Fashion</span>
-      <span style="display: block; font-size: clamp(110px, 18vw, 260px); font-style: italic; color: #E6007E">Film</span>
+      <span style="display: block; font-size: clamp(calc(110px * var(--f)), 18vw, 260px); font-style: italic; color: #E6007E">Film</span>
     </h2>
   </div>
   <figure style="margin: 0">
     <video src="assets/161c82a6432c11448d7499bdc13f0a06.mp4" poster="assets/5e4e901b0fa8b83082b9e2ea9573fffb.jpg" controls playsinline preload="metadata" aria-label="Film 01 — Filet Classic Belt" style="display: block; width: 100%; height: auto; background: #000"></video>
-    <figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 18px 48px 0 48px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">
+    <figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 18px calc(48px * var(--k)) 0 calc(48px * var(--k)); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">
       <span>Film 01 · 16:9 · 00:09</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0; text-transform: none; color: #FFFFFF">Filet Classic Belt — Summer</span>
     </figcaption>
   </figure>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding: 120px 48px 0 48px; align-items: start">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(32px * var(--k)); padding: calc(120px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); align-items: start">
     <figure style="margin: 0px 0 0 0">
       <video src="assets/f202edbb09d15e0b73815a31949bb66c.mp4" poster="assets/fb8831823c736d92bce3382061f7737f.jpg" controls playsinline preload="metadata" aria-label="Film 02 — Ankle Brontë Boots" style="display: block; width: 100%; height: auto; background: #000"></video>
       <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
@@ -173,7 +187,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </figcaption>
     </figure>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding: 56px 48px 0 48px; align-items: start">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(32px * var(--k)); padding: calc(56px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); align-items: start">
     <figure style="margin: 0px 0 0 0">
       <video src="assets/32f8b76518a91a2e6ce38908a287f7cd.mp4" poster="assets/d83a0ae739b6cf15dc5988c1c77591bb.jpg" controls playsinline preload="metadata" aria-label="Film 05 — Woonts Winter Boots × Ribbon Bag" style="display: block; width: 100%; height: auto; background: #000"></video>
       <figcaption style="margin-top: 14px; border-top: 1px solid #3A3A3A; padding-top: 12px">
@@ -199,27 +213,27 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </figcaption>
     </figure>
   </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; margin: 96px 48px 0 48px; padding-top: 32px; border-top: 1px solid #3A3A3A">
-    <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.3">AI-driven fashion films exploring movement, atmosphere, and the visual identity of everyday style.</p>
-    <dl style="margin: 0; min-width: 320px; display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 20px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; ">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); margin: calc(96px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); padding-top: 32px; border-top: 1px solid #3A3A3A">
+    <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: calc(30px * var(--t)); line-height: 1.3">AI-driven fashion films exploring movement, atmosphere, and the visual identity of everyday style.</p>
+    <dl style="margin: 0; min-width: min(320px, 100%); display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 20px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; ">
       <div><dt style="color: #A6A6A6">Format</dt><dd style="margin: 8px 0 0 0">16:9 · 9:16</dd></div>
     </dl>
   </div>
-  <div style="height: 140px"></div>
+  <div style="height: calc(140px * var(--k))"></div>
 </section>
 <!-- SeasonWinterV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #0E1114; color: #F4F4F2; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 40px 48px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+  <div style="display: flex; justify-content: space-between; gap: 16px; padding: calc(40px * var(--k)) calc(48px * var(--k)); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>(004) — Chapter I</span><span style="color: #A9B0B6">erial carob — Winter Release</span>
   </div>
   <figure style="margin: 0; position: relative">
     <img loading="lazy" decoding="async" src="assets/6ce5ed5df238e57c17cbb8bee91cfc12.jpg" alt="Model lying on a snow-covered mossy boulder at night in a white shaggy coat and black suede long boots" style="display: block; width: 100%; height: auto">
-    <h2 style="position: absolute; left: 36px; bottom: 4px; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(120px, 19vw, 270px); line-height: 0.9; letter-spacing: -0.02em; color: #FFFFFF">Winter<span style="color: #E6007E">.</span></h2>
+    <h2 style="position: absolute; left: 36px; bottom: 4px; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(calc(120px * var(--f)), 19vw, 270px); line-height: 0.9; letter-spacing: -0.02em; color: #FFFFFF">Winter<span style="color: #E6007E">.</span></h2>
   </figure>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 96px 48px 72px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(96px * var(--k)) calc(48px * var(--k)) calc(72px * var(--k)) calc(48px * var(--k))">
     <div>
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B0B6">Black Suede</p>
-      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Long Boots</span></p>
+      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(calc(56px * var(--f)), 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Long Boots</span></p>
     </div>
     <div style="max-width: 340px">
       
@@ -230,10 +244,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/cfa7a0d7a8506df18a0bfc6d0864c982.jpg" alt="Model seated on a Paris curb in a black fluffy cardigan, lace tights and black suede long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.02</figcaption></figure>
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/e9303567d644b988e1ae943ad63c4d6b.jpg" alt="Model on a striped lounge chair in a taupe fur coat and black suede long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.03</figcaption></figure>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 140px 48px 0 0">
-    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/72d9fc3f51f54b14c2af126edf8e6e0a.jpg" alt="Model walking past a terracotta facade in a brown fur jacket, grey tights and long boots" style="display: block; width: 100%; height: auto"></figure>
-    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px; display: flex; flex-direction: column; gap: 48px">
-      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) 0 0">
+    <figure style="flex: 0 1 820px; min-width: min(300px, 100%); margin: 0"><img loading="lazy" decoding="async" src="assets/72d9fc3f51f54b14c2af126edf8e6e0a.jpg" alt="Model walking past a terracotta facade in a brown fur jacket, grey tights and long boots" style="display: block; width: 100%; height: auto"></figure>
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 420px; display: flex; flex-direction: column; gap: calc(48px * var(--k))">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(44px * var(--t)); line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
       <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/cfd10c8fedee37f9694862509736d394.jpg" alt="Model on a cream curved sofa in a charcoal chunky knit and long boots" style="display: block; width: 100%; height: auto"><figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.04 — I.05</figcaption></figure>
     </div>
   </div>
@@ -241,49 +255,49 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/b9b20d4e4aa9fb47a9fb3238e73db348.jpg" alt="Model before a black lacquered door in a charcoal coat, white fringed scarf and long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.06</figcaption></figure>
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/463e282b9bf1f55e3e9138a818df8b21.jpg" alt="Model leaning on a stone wall on a Paris avenue in a brown jacket, cream scarf and long boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #A9B0B6">I.07</figcaption></figure>
   </div>
-  <div style="height: 100px"></div>
+  <div style="height: calc(100px * var(--k))"></div>
 </section>
 <!-- SeasonWinter2V2 -->
 <section style="width: 100%; box-sizing: border-box; background: #E6EBEF; color: #1A2028; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 40px 48px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+  <div style="display: flex; justify-content: space-between; gap: 16px; padding: calc(40px * var(--k)) calc(48px * var(--k)); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>(004) — Chapter I · Second Release</span><span style="color: #4F5964">erial carob — Winter</span>
   </div>
   <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/b67c59657204be4e31f21ae05f908e86.jpg" alt="Model crouching in a snowy studio in a white faux fur jacket and shearling-lined black winter boots, one cuff folded down" style="display: block; width: 100%; height: auto"></figure>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 96px 48px 72px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(96px * var(--k)) calc(48px * var(--k)) calc(72px * var(--k)) calc(48px * var(--k))">
     <div>
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4F5964">Black Leather — Shearling Cuff</p>
-      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Winter Boots<span style="color: #E6007E">.</span></span></p>
+      <p style="margin: 18px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(calc(56px * var(--f)), 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em">Woonts <span style="font-style: italic">Winter Boots<span style="color: #E6007E">.</span></span></p>
     </div>
     <div style="max-width: 340px">
       <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4F5964">Worn tall with the shearling cuff up, or folded down to show the lining.</p>
       <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">Looks I.08 — I.15</p>
     </div>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 0 0 0 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); padding: 0 0 0 calc(48px * var(--k))">
     <figure style="flex: 1 1 300px; min-width: 0; max-width: 420px; margin: 0"><img loading="lazy" decoding="async" src="assets/61abc80bb2ebbe0a0da27cbd1a0fc27c.jpg" alt="Model on a stone bench by a column in a grey shearling-lined coat with boot cuffs folded down" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.09 — Cuff down</figcaption></figure>
-    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/b17b2e2d6231896bf996ec0cf735ed9a.jpg" alt="Model on a wooden bench outside a Paris café in a brown shearling jacket and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.10</figcaption></figure>
+    <figure style="flex: 0 1 820px; min-width: min(300px, 100%); margin: 0"><img loading="lazy" decoding="async" src="assets/b17b2e2d6231896bf996ec0cf735ed9a.jpg" alt="Model on a wooden bench outside a Paris café in a brown shearling jacket and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.10</figcaption></figure>
   </div>
   <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 140px">
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/d2932042c27c8276a74197ee746b9f7d.jpg" alt="Model walking past a concrete wall in a black puffer, red scarf and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.11</figcaption></figure>
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/423183cad21ea510e476c3b949f19969.jpg" alt="Model on a steel bench in a black puffer and red hood scarf, boot cuffs folded down" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.12</figcaption></figure>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 140px 48px 0 48px; align-items: start">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(24px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); align-items: start">
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/13d8813c50556b19bca2746d4fde08e8.jpg" alt="Model leaning on a stone pillar in a long black coat, leather gloves and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.13</figcaption></figure>
-    <figure style="margin: 160px 0 0 0"><img loading="lazy" decoding="async" src="assets/2ba1efb3ddb7bc396e706bce3e52b5e2.jpg" alt="Model against a stone wall in a cream coat and scarf with a brown bag and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.14</figcaption></figure>
-    <figure style="margin: 80px 0 0 0"><img loading="lazy" decoding="async" src="assets/b8f2e741ad7588c99be00da1ecd4291e.jpg" alt="Model in a brick-walled loft in a cream coat, ribbed knit skirt and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.15</figcaption></figure>
+    <figure style="margin: calc(160px * var(--k)) 0 0 0"><img loading="lazy" decoding="async" src="assets/2ba1efb3ddb7bc396e706bce3e52b5e2.jpg" alt="Model against a stone wall in a cream coat and scarf with a brown bag and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.14</figcaption></figure>
+    <figure style="margin: calc(80px * var(--k)) 0 0 0"><img loading="lazy" decoding="async" src="assets/b8f2e741ad7588c99be00da1ecd4291e.jpg" alt="Model in a brick-walled loft in a cream coat, ribbed knit skirt and winter boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 0.12em; color: #4F5964">I.15</figcaption></figure>
   </div>
-  <p style="margin: 120px 48px 0 48px; text-align: right; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
-  <div style="height: 120px"></div>
+  <p style="margin: calc(120px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); text-align: right; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(44px * var(--t)); line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+  <div style="height: calc(120px * var(--k))"></div>
 </section>
 <!-- SeasonAutumnV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="padding: 140px 48px 72px 48px">
+  <div style="padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(72px * var(--k)) calc(48px * var(--k))">
     <div style="display: flex; justify-content: space-between; gap: 16px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
       <span>(005) — Chapter II</span>
       <span style="color: #A6A6A6">erial carob — Autumn Release</span>
     </div>
-    <h2 style="margin: 24px 0 0 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(120px, 20vw, 280px); line-height: 0.9; letter-spacing: -0.02em">Autumn<span style="color: #E6007E">.</span></h2>
-    <p style="margin: 36px 0 0 0; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase">Ankle Brontë Nubuck French Western Boots</p>
+    <h2 style="margin: calc(24px * var(--k)) 0 0 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(calc(120px * var(--f)), 20vw, 280px); line-height: 0.9; letter-spacing: -0.02em">Autumn<span style="color: #E6007E">.</span></h2>
+    <p style="margin: calc(36px * var(--k)) 0 0 0; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase">Ankle Brontë Nubuck French Western Boots</p>
   </div>
   <div style="display: flex; flex-wrap: wrap; gap: 4px">
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0">
@@ -295,12 +309,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <figcaption style="padding: 14px 20px; text-align: right; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">II.02 — Stairwell — Brown</figcaption>
     </figure>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 48px; padding: 120px 48px 120px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: calc(48px * var(--k)); padding: calc(120px * var(--k)) calc(48px * var(--k)) calc(120px * var(--k)) calc(48px * var(--k))">
     <div style="flex: 1 1 220px; min-width: 0; max-width: 300px">
-      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.3">A quiet confidence, carried through every step.</p>
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: calc(28px * var(--t)); line-height: 1.3">A quiet confidence, carried through every step.</p>
       <p style="margin: 18px 0 0 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #A6A6A6">Looks II.01 — II.09</p>
     </div>
-    <figure style="flex: 0 1 600px; min-width: 280px; margin: 0">
+    <figure style="flex: 0 1 600px; min-width: min(280px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/07bebe325d78b86dbe4879de220feab8.jpg" alt="Model reclining on a chrome cantilever chair with tan nubuck western boots raised" style="display: block; width: 100%; height: auto">
     </figure>
     <ol style="flex: 1 1 220px; min-width: 0; max-width: 260px; margin: 0; padding: 16px 0 0 0; list-style: none; border-top: 1px solid #FFFFFF; font-size: 12px; line-height: 2; letter-spacing: 0.08em; color: #D9D9D9">
@@ -319,24 +333,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/8d6c571c05fa4b6b8078e14e4e0e29f2.jpg" alt="Fisheye shot of model crouching in a white studio in black western boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.06</figcaption></figure>
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/42da4e4e0ab747f06d5522bc953b7980.jpg" alt="Model drinking coffee on a park bench in black western boots" style="display: block; width: 100%; height: auto"><figcaption style="padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.07</figcaption></figure>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 48px; padding: 120px 48px 140px 0">
-    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: calc(48px * var(--k)); padding: calc(120px * var(--k)) calc(48px * var(--k)) calc(140px * var(--k)) 0">
+    <figure style="flex: 0 1 760px; min-width: min(300px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/22858e818d1ecfed517cb71639814311.jpg" alt="Model seated on a night street pavement in a leather jacket and brown western boots" style="display: block; width: 100%; height: auto">
-      <figcaption style="padding: 14px 0 0 48px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.08</figcaption>
+      <figcaption style="padding: 14px 0 0 calc(48px * var(--k)); font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.08</figcaption>
     </figure>
-    <figure style="flex: 0 1 420px; min-width: 240px; margin: 240px 0 0 0">
+    <figure style="flex: 0 1 420px; min-width: min(240px, 100%); margin: calc(240px * var(--k)) 0 0 0">
       <img loading="lazy" decoding="async" src="assets/27cf43917fbff49ae1f4a35fedac1af8.jpg" alt="Model leaning on a sunlit stone wall with a black leather bag and black western boots" style="display: block; width: 100%; height: auto">
       <figcaption style="margin-top: 14px; font-size: 11px; letter-spacing: 0.12em; color: #A6A6A6">II.09</figcaption>
-      <p style="margin: 64px 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+      <p style="margin: calc(64px * var(--k)) 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(40px * var(--t)); line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
     </figure>
   </div>
 </section>
 <!-- SeasonAutumn2V2 -->
 <section style="width: 100%; box-sizing: border-box; background: #D8CDBF; color: #2A211C; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 120px 48px 56px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(120px * var(--k)) calc(48px * var(--k)) calc(56px * var(--k)) calc(48px * var(--k))">
     <div>
-      <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(005) — Chapter II · Accessories</p>
-      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(96px, 15vw, 210px); line-height: 0.9; letter-spacing: -0.02em">Mumu Bag<span style="color: #E6007E">.</span></h2>
+      <p style="margin: 0 0 calc(28px * var(--k)) 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(005) — Chapter II · Accessories</p>
+      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: clamp(calc(96px * var(--f)), 15vw, 210px); line-height: 0.9; letter-spacing: -0.02em">Mumu Bag<span style="color: #E6007E">.</span></h2>
     </div>
     <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5A4A3E">erial carob — Autumn · Black Brown</p>
   </div>
@@ -359,14 +373,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <!-- SeasonSummerV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #F2F0EC; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 80px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(80px * var(--k)) calc(48px * var(--k))">
     <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
       <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px">(006) — Chapter III</span>
-      <span style="display: block; font-size: clamp(110px, 17vw, 240px); font-style: italic">Summer<span style="color: #E6007E">.</span></span>
+      <span style="display: block; font-size: clamp(calc(110px * var(--f)), 17vw, 240px); font-style: italic">Summer<span style="color: #E6007E">.</span></span>
     </h2>
     <div style="max-width: 380px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">erial carob — Summer Release</p>
-      <ul style="margin: 14px 0 0 0; padding: 0; list-style: none; font-family: 'Cormorant Garamond', serif; font-size: 26px; line-height: 1.25">
+      <ul style="margin: 14px 0 0 0; padding: 0; list-style: none; font-family: 'Cormorant Garamond', serif; font-size: calc(26px * var(--t)); line-height: 1.25">
         <li>Round-Neck Drawing Long-Sleeve Tee</li>
         <li>Natural-Neck Graphic Long-Sleeve Tee</li>
         <li>Off-Shoulder Long-Sleeve Tee</li>
@@ -376,21 +390,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     </div>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 0 48px 0 0">
-    <figure style="flex: 0 1 820px; min-width: 300px; margin: 0">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); padding: 0 calc(48px * var(--k)) 0 0">
+    <figure style="flex: 0 1 820px; min-width: min(300px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/95a82995a5d6a0374d90dedb54722ef5.jpg" alt="Model on a stairway with a mint railing, holding purple roses and a black leather jacket, wearing the red ribbon tee" style="display: block; width: 100%; height: auto">
     </figure>
     <div style="flex: 1 1 280px; min-width: 0; max-width: 360px; display: flex; flex-direction: column; gap: 16px">
-      <p style="margin: 0 0 8px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">01</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Red Ribbon</span></p>
+      <p style="margin: 0 0 8px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">01</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Red Ribbon</span></p>
       <img loading="lazy" decoding="async" src="assets/a67de6016bfe69abbd04c4c29cac79b4.jpg" alt="Model holding a door handle in the red ribbon tee and white cargo trousers" style="display: block; width: 100%; height: auto">
       <img loading="lazy" decoding="async" src="assets/dc06b555234a2d55c5febec06a277d00.jpg" alt="Mirror selfie in the red ribbon tee with a knit tied at the waist" style="display: block; width: 100%; height: auto">
       <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.01 — III.03</p>
     </div>
   </div>
 
-  <div style="padding: 140px 0 0 0">
-    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 0 48px 28px 48px">
-      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">02</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Ugly Apple</span></p>
+  <div style="padding: calc(140px * var(--k)) 0 0 0">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: calc(24px * var(--k)); padding: 0 calc(48px * var(--k)) calc(28px * var(--k)) calc(48px * var(--k))">
+      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">02</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Ugly Apple</span></p>
       <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.04 — III.07</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; align-items: start">
@@ -401,13 +415,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     </div>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px; padding: 140px 48px 0 48px">
-    <figure style="flex: 0 1 600px; min-width: 280px; margin: 0">
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: calc(48px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k))">
+    <figure style="flex: 0 1 600px; min-width: min(280px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/b4b0c9e6f4a329f5ef61d9010a3a6ead.jpg" alt="Back view of the model showing the stamp print on the long-sleeve tee" style="display: block; width: 100%; height: auto">
     </figure>
     <div style="flex: 1 1 360px; min-width: 0">
-      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">03</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Stamp</span></p>
-      <p style="margin: 16px 0 40px 0; font-size: 14px; line-height: 1.6; color: #5C5C5C">Small chest motif at the front, stamp print across the back.</p>
+      <p style="margin: 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">03</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Stamp</span></p>
+      <p style="margin: 16px 0 calc(40px * var(--k)) 0; font-size: 14px; line-height: 1.6; color: #5C5C5C">Small chest motif at the front, stamp print across the back.</p>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: end">
         <figure style="margin: 0"><div><img loading="lazy" decoding="async" src="assets/b54a178875e331bc21e2963275a3becd.webp" alt="Front flat lay of the stamp tee with a small dove and ribbon chest motif" style="display: block; width: 100%; height: auto"></div><figcaption style="margin-top: 10px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Front</figcaption></figure>
         <figure style="margin: 0"><div><img loading="lazy" decoding="async" src="assets/01f050fd93f871cb1076b38658f66185.webp" alt="Back flat lay of the stamp tee" style="display: block; width: 100%; height: auto"></div><figcaption style="margin-top: 10px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Back</figcaption></figure>
@@ -422,15 +436,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 </section>
 <!-- SeasonSummer2V2 -->
-<section style="width: 100%; box-sizing: border-box; background: #F2F0EC; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 48px; padding: 120px 0 0 48px">
+<section style="width: 100%; box-sizing: border-box; background: #F2F0EC; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: calc(48px * var(--k)); padding: calc(120px * var(--k)) 0 0 calc(48px * var(--k))">
     <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Natural-Neck Graphic Long-Sleeve Tee</p>
-      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">04</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Sparkle</span></p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">04</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Sparkle</span></p>
       <p style="margin: 16px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.11 — III.13</p>
       <div style="margin-top: 72px; max-width: 340px"><img loading="lazy" decoding="async" src="assets/a2d3045c5de008a41d837832b8826d3e.webp" alt="Natural-neck graphic long-sleeve tee with the Sparkle apple print, cutout" style="display: block; width: 100%; height: auto"></div>
-      <p style="margin: 72px 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+      <p style="margin: calc(72px * var(--k)) 0 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(44px * var(--t)); line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
     </div>
-    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+    <figure style="flex: 0 1 760px; min-width: min(300px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/24a7e6cc52ff044fffa3c3e6a040aee0.jpg" alt="Model shading her eyes under a brick arcade in the radiant apple tee, navy shorts and brown boots" style="display: block; width: 100%; height: auto">
     </figure>
   </div>
@@ -439,25 +453,25 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/5b7774b52fdbf0cba6246dee609e00b1.jpg" alt="Model seated at a wooden table by a brick wall in the radiant apple tee with a red knit" style="display: block; width: 100%; height: auto"></figure>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 160px 0 0 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); padding: calc(160px * var(--k)) 0 0 calc(48px * var(--k))">
     <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Off-Shoulder Long-Sleeve Tee</p>
-      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">05</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Angel</span></p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">05</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Angel</span></p>
       <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.14 — III.17</p>
       <div style="margin-top: 72px; max-width: 340px"><img loading="lazy" decoding="async" src="assets/b7b20d781988dca36000da2a568a1c6b.webp" alt="Off-shoulder long-sleeve tee with the angel and apple print, cutout" style="display: block; width: 100%; height: auto"></div>
     </div>
-    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/942bbc1423748b3a4f8a592376884e77.jpg" alt="Model standing on sand before a pale wall in the off-shoulder angel tee and polka-dot shorts" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="flex: 0 1 760px; min-width: min(300px, 100%); margin: 0"><img loading="lazy" decoding="async" src="assets/942bbc1423748b3a4f8a592376884e77.jpg" alt="Model standing on sand before a pale wall in the off-shoulder angel tee and polka-dot shorts" style="display: block; width: 100%; height: auto"></figure>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 48px 48px 0 48px; align-items: start">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(24px * var(--k)); padding: calc(48px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k)); align-items: start">
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/c112d5a9ea3dc5088e7f1db515fa34dd.jpg" alt="Model with a rangefinder camera leaning on a street pillar in the angel tee" style="display: block; width: 100%; height: auto"></figure>
-    <figure style="margin: 160px 0 0 0"><img loading="lazy" decoding="async" src="assets/47b66dff0fbc39d00dff6489331dc230.jpg" alt="Model holding a compact camera against a white-tiled wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
-    <figure style="margin: 80px 0 0 0"><img loading="lazy" decoding="async" src="assets/eda84704ff039de2f2e72cda05a9079e.jpg" alt="Model checking her phone by a brick wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: calc(160px * var(--k)) 0 0 0"><img loading="lazy" decoding="async" src="assets/47b66dff0fbc39d00dff6489331dc230.jpg" alt="Model holding a compact camera against a white-tiled wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
+    <figure style="margin: calc(80px * var(--k)) 0 0 0"><img loading="lazy" decoding="async" src="assets/eda84704ff039de2f2e72cda05a9079e.jpg" alt="Model checking her phone by a brick wall in the angel tee" style="display: block; width: 100%; height: auto"></figure>
   </div>
 
-  <div style="padding: 160px 0 0 0">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 0 48px 32px 48px">
+  <div style="padding: calc(160px * var(--k)) 0 0 0">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(24px * var(--k)); padding: 0 calc(48px * var(--k)) calc(32px * var(--k)) calc(48px * var(--k))">
       <div><p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Ribbed Scoop-Neck Slim Tee</p>
-      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">06</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Fade</span></p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">06</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Fade</span></p>
       <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.18 — III.22</p></div>
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 4px">
@@ -465,18 +479,18 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <figure style="flex: 1 1 400px; min-width: 0; margin: 0"><img loading="lazy" decoding="async" src="assets/a9480104de76f942a3815861825fb066.jpg" alt="Model in glasses perched on a white armchair in the ribbed fade tee" style="display: block; width: 100%; height: auto"></figure>
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin-top: 4px; align-items: center">
-      <figure style="margin: 0; padding: 32px"><img loading="lazy" decoding="async" src="assets/30cd5f0fe5fd9e56db652678a44e5b5e.webp" alt="Ribbed scoop-neck slim tee with the faded apple trio print, cutout" style="display: block; width: 100%; height: auto"></figure>
+      <figure style="margin: 0; padding: calc(32px * var(--k))"><img loading="lazy" decoding="async" src="assets/30cd5f0fe5fd9e56db652678a44e5b5e.webp" alt="Ribbed scoop-neck slim tee with the faded apple trio print, cutout" style="display: block; width: 100%; height: auto"></figure>
       <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/e67ad0c956fc7c4abad4b21bc06781ce.jpg" alt="Model taking a selfie on a stone bench in the ribbed fade tee" style="display: block; width: 100%; height: auto"></figure>
       <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/f435b1d99df4dcabb72187bc91ecb34d.jpg" alt="Mirror selfie in the ribbed fade tee with a denim mini skirt" style="display: block; width: 100%; height: auto"></figure>
       <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/99de0b88813be2c2f9424004373fa2ad.jpg" alt="Model tilting her head on a side street in the ribbed fade tee holding a denim jacket" style="display: block; width: 100%; height: auto"></figure>
     </div>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 48px; padding: 160px 48px 0 0">
-    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0"><img loading="lazy" decoding="async" src="assets/2aaf3e2106ef812918facd923037f45a.jpg" alt="Studio portrait in the ribbed grey apple tee and light jeans" style="display: block; width: 100%; height: auto"></figure>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: calc(48px * var(--k)); padding: calc(160px * var(--k)) calc(48px * var(--k)) 0 0">
+    <figure style="flex: 0 1 760px; min-width: min(300px, 100%); margin: 0"><img loading="lazy" decoding="async" src="assets/2aaf3e2106ef812918facd923037f45a.jpg" alt="Studio portrait in the ribbed grey apple tee and light jeans" style="display: block; width: 100%; height: auto"></figure>
     <div style="flex: 1 1 300px; min-width: 0; max-width: 420px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Ribbed Scoop-Neck Slim Tee</p>
-      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">07</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; line-height: 1">Grey Apple</span></p>
+      <p style="margin: 12px 0 0 0; display: flex; gap: 14px; align-items: baseline"><span style="font-size: 11px; font-weight: 600">07</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(48px * var(--t)); line-height: 1">Grey Apple</span></p>
       <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">III.23 — III.26</p>
       <div style="margin-top: 72px; max-width: 360px"><img loading="lazy" decoding="async" src="assets/2bd67b6f3d98f662429ff69a6d77ab88.webp" alt="Ribbed scoop-neck slim tee with the grey ribbon apple print, cutout" style="display: block; width: 100%; height: auto"></div>
     </div>
@@ -486,18 +500,18 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/4afb2b6b6339a0b780e77f95303c43cd.jpg" alt="Model in sunlight against a rusted steel wall in the grey apple tee" style="display: block; width: 100%; height: auto"></figure>
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/23ab2afa42321486db722c9ad690bebf.jpg" alt="Model taking a selfie by a travertine wall in the grey apple tee" style="display: block; width: 100%; height: auto"></figure>
   </div>
-  <div style="height: 120px"></div>
+  <div style="height: calc(120px * var(--k))"></div>
 </section>
 <!-- SeasonSummer3V2 -->
 <section style="width: 100%; box-sizing: border-box; background: #E6E5E1; color: #141414; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 120px 48px 0 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(120px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k))">
     <div>
-      <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(006) — Chapter III · Accessories</p>
-      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(80px, 11vw, 160px); line-height: 0.9; letter-spacing: -0.02em"><span style="display: block">Filet</span><span style="display: block; padding-left: 0.5em; font-style: italic">Classic Belt<span style="color: #E6007E">.</span></span></h2>
+      <p style="margin: 0 0 calc(28px * var(--k)) 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(006) — Chapter III · Accessories</p>
+      <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(calc(80px * var(--f)), 11vw, 160px); line-height: 0.9; letter-spacing: -0.02em"><span style="display: block">Filet</span><span style="display: block; padding-left: 0.5em; font-style: italic">Classic Belt<span style="color: #E6007E">.</span></span></h2>
     </div>
     <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A4A48">erial carob — Summer</p>
   </div>
-  <div style="display: flex; align-items: center; gap: 12px; padding: 64px 48px 20px 48px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #141414"></span>Black</div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: calc(64px * var(--k)) calc(48px * var(--k)) 20px calc(48px * var(--k)); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #141414"></span>Black</div>
   <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px">
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/ea3d16b99d6818b2d3a0541e9bd127e0.jpg" alt="Model walking a night street in a white tank, wide jeans and the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/ba302a60a9ed2ac775e72d4b3a855094.jpg" alt="Model laughing in a dressing room in a white tank, washed jeans and the black belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
@@ -509,7 +523,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/708e787ad5dc447d8940b7da7d1a2303.jpg" alt="Smocked blouse and black belt on a sunlit terrace" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/94ded3c2352fdd3d75e67e0b9f5bd391.jpg" alt="Pintucked blouse and black belt against a white wall at sunset" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
   </div>
-  <div style="display: flex; align-items: center; gap: 12px; padding: 64px 48px 20px 48px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6B1F2A"></span>Burgundy</div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: calc(64px * var(--k)) calc(48px * var(--k)) 20px calc(48px * var(--k)); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6B1F2A"></span>Burgundy</div>
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px">
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/50a8fc803ec59d6a68e1883d71ca9530.jpg" alt="Grey rib tank and white mini skirt with the burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
     <figure style="margin: 0; overflow: hidden; aspect-ratio: 3 / 4;"><img loading="lazy" decoding="async" src="assets/4eed352f597c6981a8e4a5be443995b0.jpg" alt="Model with hands on hips in a grey tank and burgundy belt" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top"></figure>
@@ -527,60 +541,60 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 </section>
 <!-- SeasonSpringV2 -->
 <section style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', sans-serif; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding: 140px 48px 80px 48px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k)); padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(80px * var(--k)) calc(48px * var(--k))">
     <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em">
       <span style="display: block; font-family: 'Archivo', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px">(007) — Chapter IV</span>
-      <span style="display: block; font-size: clamp(110px, 17vw, 240px); font-style: italic">Spring<span style="color: #E6007E">.</span></span>
+      <span style="display: block; font-size: clamp(calc(110px * var(--f)), 17vw, 240px); font-style: italic">Spring<span style="color: #E6007E">.</span></span>
     </h2>
     <div style="max-width: 360px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">erial carob — Spring Release</p>
-      <p style="margin: 14px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 34px; line-height: 1.1">Manon Semi-Overfit Shirt</p>
+      <p style="margin: 14px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: calc(34px * var(--t)); line-height: 1.1">Manon Semi-Overfit Shirt</p>
       
     </div>
   </div>
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px">
-    <figure style="flex: 0 1 840px; min-width: 300px; margin: 0">
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: calc(48px * var(--k))">
+    <figure style="flex: 0 1 840px; min-width: min(300px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/d936a5489b2363c63f1d4b8f71f4d544.jpg" alt="Full-length studio look in a white textured shirt, cream pleated trousers and a brown shoulder bag" style="display: block; width: 100%; height: auto">
     </figure>
-    <figure style="flex: 1 1 280px; min-width: 0; max-width: 400px; margin: 0 48px 0 0">
+    <figure style="flex: 1 1 280px; min-width: 0; max-width: 400px; margin: 0 calc(48px * var(--k)) 0 0">
       <img loading="lazy" decoding="async" src="assets/ef384b8a1f8cd076c3dae55469d76d75.jpg" alt="Close portrait in a light grey textured shirt against a white wall" style="display: block; width: 100%; height: auto">
       <figcaption style="margin-top: 14px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">IV.01 — White · IV.02 — Grey</figcaption>
     </figure>
   </div>
-  <div style="padding: 120px 48px 0 48px">
-    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-bottom: 1px solid #0A0A0A; padding-bottom: 18px">
+  <div style="padding: calc(120px * var(--k)) calc(48px * var(--k)) 0 calc(48px * var(--k))">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: calc(24px * var(--k)); border-bottom: 1px solid #0A0A0A; padding-bottom: 18px">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">Colourways</p>
       <p style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5C5C5C">Manon Semi-Overfit Shirt</p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; align-items: start">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(24px * var(--k)); margin-top: 28px; align-items: start">
       <figure style="margin: 0">
-        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">Black</p>
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(40px * var(--t)); line-height: 1">Black</p>
         <img loading="lazy" decoding="async" src="assets/2a78358290fc76d775ff8121c5631578.jpg" alt="Black textured shirt worn open over a white tank with black jeans in a studio" style="display: block; width: 100%; height: auto">
         <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.03</figcaption>
       </figure>
       <figure style="margin: 0">
-        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">White</p>
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(40px * var(--t)); line-height: 1">White</p>
         <img loading="lazy" decoding="async" src="assets/1a93749c2fcfcd05d2c3082b179ac37e.jpg" alt="White textured shirt with light jeans, model leaning on a white wall by a staircase" style="display: block; width: 100%; height: auto">
         <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.04</figcaption>
       </figure>
       <figure style="margin: 0">
-        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; line-height: 1">Grey</p>
+        <p style="margin: 0 0 16px 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(40px * var(--t)); line-height: 1">Grey</p>
         <img loading="lazy" decoding="async" src="assets/583bca7f9cbc464fb38db5b539a889f3.jpg" alt="Light grey shirt with a grey skirt and knee boots beside a spiral staircase" style="display: block; width: 100%; height: auto">
         <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.05</figcaption>
       </figure>
     </div>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 48px; padding: 140px 0 0 48px">
-    <div style="flex: 1 1 300px; min-width: 0; max-width: 400px; display: flex; flex-direction: column; gap: 56px">
-      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(48px * var(--k)); padding: calc(140px * var(--k)) 0 0 calc(48px * var(--k))">
+    <div style="flex: 1 1 300px; min-width: 0; max-width: 400px; display: flex; flex-direction: column; gap: calc(56px * var(--k))">
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(44px * var(--t)); line-height: 1.05">Timeless Essentials<span style="color: #E6007E">.</span></p>
       <figure style="margin: 0">
         <img loading="lazy" decoding="async" src="assets/6b575ead7ed6d1600b8cbaaaa839e20b.jpg" alt="Grey striped shirt with a green knit tied at the waist, model in a fitting room with white curtains" style="display: block; width: 100%; height: auto">
         <figcaption style="margin-top: 12px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.06</figcaption>
       </figure>
     </div>
-    <figure style="flex: 0 1 760px; min-width: 300px; margin: 0">
+    <figure style="flex: 0 1 760px; min-width: min(300px, 100%); margin: 0">
       <img loading="lazy" decoding="async" src="assets/e847579c0dd27a3d0dfa105c3eea6ff2.jpg" alt="Black shirt with a grey knit over the shoulders, white shorts and black knee boots in a concrete room" style="display: block; width: 100%; height: auto">
-      <figcaption style="padding: 12px 48px 0 0; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.07</figcaption>
+      <figcaption style="padding: 12px calc(48px * var(--k)) 0 0; text-align: right; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.07</figcaption>
     </figure>
   </div>
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 120px; align-items: start">
@@ -588,28 +602,28 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/4f857c84d7c94b377428647a8761d371.jpg" alt="White shirt layered under an olive jacket with wide jeans on a stairwell" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.09 — White</figcaption></figure>
     <figure style="margin: 0"><img loading="lazy" decoding="async" src="assets/355c7758992e58a010bea3bcfc226c6a.jpg" alt="Full-length black shirt look with black flared jeans and patent pumps in a studio" style="display: block; width: 100%; height: auto"><figcaption style="padding: 12px 16px; font-size: 11px; letter-spacing: 0.12em; color: #5C5C5C">IV.10 — Black</figcaption></figure>
   </div>
-  <div style="height: 120px"></div>
+  <div style="height: calc(120px * var(--k))"></div>
 </section>
 <!-- S06ProductV2 -->
-<section style="width: 100%; box-sizing: border-box; background: #0F0F0F; color: #F2F2F0; font-family: 'Archivo', sans-serif; padding: 140px 48px 160px 48px; overflow: hidden">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<section style="width: 100%; box-sizing: border-box; background: #0F0F0F; color: #F2F2F0; font-family: 'Archivo', sans-serif; padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(160px * var(--k)) calc(48px * var(--k)); overflow: hidden">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: calc(32px * var(--k))">
     <div>
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">(008) — Model Comp Cards</p>
-      <h2 style="margin: 32px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(80px, 12vw, 170px); line-height: 0.9; letter-spacing: -0.02em">
+      <h2 style="margin: calc(32px * var(--k)) 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(calc(80px * var(--f)), 12vw, 170px); line-height: 0.9; letter-spacing: -0.02em">
         <span style="display: block">The</span><span style="display: block; padding-left: 0.6em; font-style: italic">Faces<span style="color: #E6007E">.</span></span>
       </h2>
     </div>
     <div style="max-width: 360px; text-align: right">
-      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.25">Three original AI models, cast for erial carob.</p>
+      <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: calc(28px * var(--t)); line-height: 1.25">Three original AI models, cast for erial carob.</p>
       <p style="margin: 14px 0 0 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A9A9A">Created by EO Visual Studio</p>
     </div>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 96px; align-items: start">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(24px * var(--k)); margin-top: 96px; align-items: start">
     <figure style="margin: 0">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">01</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(56px * var(--t)); line-height: 1">01</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
       <img loading="lazy" decoding="async" src="assets/837f7d8955902e3a53c945978c7674b9.png" alt="Studio headshot of AI model Yujin" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
       <figcaption style="margin-top: 20px">
-        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Yujin</p>
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: calc(30px * var(--t)); line-height: 1">Yujin</p>
         <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Black, blunt fringe</dd></div>
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Brown</dd></div>
@@ -619,10 +633,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </figcaption>
     </figure>
     <figure style="margin: 0">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">02</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(56px * var(--t)); line-height: 1">02</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
       <img loading="lazy" decoding="async" src="assets/4f35460f9dfd71d84eda30d72141fa16.png" alt="Studio headshot of AI model Eva" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
       <figcaption style="margin-top: 20px">
-        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Eva</p>
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: calc(30px * var(--t)); line-height: 1">Eva</p>
         <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Light brown, long</dd></div>
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Grey-green</dd></div>
@@ -632,10 +646,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </figcaption>
     </figure>
     <figure style="margin: 0">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; line-height: 1">03</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: calc(56px * var(--t)); line-height: 1">03</span><span style="font-size: 11px; letter-spacing: 0.12em; color: #9A9A9A">AI MODEL</span></div>
       <img loading="lazy" decoding="async" src="assets/2dfb6dce3dacbfd0991dd45c32c316ec.png" alt="Studio headshot of AI model Jane" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top">
       <figcaption style="margin-top: 20px">
-        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1">Jane</p>
+        <p style="margin: 0 0 14px 0; font-family: 'Cormorant Garamond', serif; font-size: calc(30px * var(--t)); line-height: 1">Jane</p>
         <dl style="margin: 0; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Hair</dt><dd style="margin: 0; text-align: right">Black, long layers</dd></div>
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #2E2E2E"><dt style="color: #9A9A9A">Eyes</dt><dd style="margin: 0; text-align: right">Brown</dd></div>
@@ -647,14 +661,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   </div>
 </section>
 <!-- S09CreditsV2 -->
-<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #F2F0EC; font-family: 'Archivo', sans-serif; padding: 140px 48px 140px 48px; overflow: hidden">
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #F2F0EC; font-family: 'Archivo', sans-serif; padding: calc(140px * var(--k)) calc(48px * var(--k)) calc(140px * var(--k)) calc(48px * var(--k)); overflow: hidden">
   <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>(009)</span>
     <span style="color: #8C8C8C">Credits</span>
   </div>
-  <h2 style="margin: 56px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(64px, 9vw, 128px); line-height: 0.92; letter-spacing: -0.02em">Creative Production<br><span style="font-style: italic">by EO</span><span style="color: #E6007E">.</span></h2>
+  <h2 style="margin: calc(56px * var(--k)) 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(calc(64px * var(--f)), 9vw, 128px); line-height: 0.92; letter-spacing: -0.02em">Creative Production<br><span style="font-style: italic">by EO</span><span style="color: #E6007E">.</span></h2>
 
-  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; margin: 96px 0 0 0">
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 calc(64px * var(--k)); margin: calc(96px * var(--k)) 0 0 0">
     <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
       <p style="margin: 0 0 10px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">프로젝트</p>
       <p style="margin: 0; font-size: 18px">에리얼카럽 — Four Seasons 캠페인</p>
@@ -678,23 +692,23 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <div style="padding: 20px 0; border-top: 1px solid #3A3A3A">
       <p style="margin: 0 0 14px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">사용 도구</p>
       
-        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+        <div style="display: flex; justify-content: space-between; gap: calc(24px * var(--k)); margin: 0 0 8px 0; font-size: 15px">
           <span>AI 이미지</span><span style="color: #8C8C8C">Nano Banana</span>
         </div>
       
-        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+        <div style="display: flex; justify-content: space-between; gap: calc(24px * var(--k)); margin: 0 0 8px 0; font-size: 15px">
           <span>AI 영상</span><span style="color: #8C8C8C">Veo · Higgsfield · Seedance 2.5</span>
         </div>
       
-        <div style="display: flex; justify-content: space-between; gap: 24px; margin: 0 0 8px 0; font-size: 15px">
+        <div style="display: flex; justify-content: space-between; gap: calc(24px * var(--k)); margin: 0 0 8px 0; font-size: 15px">
           <span>그래픽 · 편집</span><span style="color: #8C8C8C">Photoshop · Illustrator · CapCut</span>
         </div>
       
     </div>
   </div>
 
-  <div style="margin: 72px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A">
-    <p style="margin: 0 0 28px 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">제작 과정</p>
+  <div style="margin: calc(72px * var(--k)) 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A">
+    <p style="margin: 0 0 calc(28px * var(--k)) 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">제작 과정</p>
     <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
       
         <div>
@@ -725,25 +739,25 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     </div>
   </div>
 
-  <div style="margin: 72px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A; display: grid; grid-template-columns: 1fr 2fr; gap: 64px">
+  <div style="margin: calc(72px * var(--k)) 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #3A3A3A; display: grid; grid-template-columns: 1fr 2fr; gap: calc(64px * var(--k))">
     <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8C8C8C">작업 범위</p>
     <p style="margin: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.8; max-width: 680px">이 포트폴리오의 모든 AI 이미지와 AI 패션 필름은 EO가 직접 기획·디렉팅하고 제작했습니다. 브랜드와 제품, 컬렉션의 권리는 에리얼카럽에 있습니다.</p>
   </div>
 </section>
 <!-- S10ContactV2 -->
-<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; padding: 120px 48px 48px 48px; overflow: hidden">
+<section style="width: 100%; box-sizing: border-box; background: #0A0A0A; color: #FFFFFF; font-family: 'Archivo', sans-serif; padding: calc(120px * var(--k)) calc(48px * var(--k)) calc(48px * var(--k)) calc(48px * var(--k)); overflow: hidden">
   <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
     <span>(010)</span>
     <span style="color: #A6A6A6">Contact</span>
   </div>
-  <h2 style="margin: 40px 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em; position: relative">
-    <span style="display: block; font-size: clamp(180px, 34vw, 480px)">EO</span>
-    <span style="display: block; margin: -0.35em 0 0 2.2em; font-style: italic; font-size: clamp(56px, 9vw, 128px); letter-spacing: -0.02em; color: #E6007E">Visual Studio</span>
+  <h2 style="margin: calc(40px * var(--k)) 0 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.02em; position: relative">
+    <span style="display: block; font-size: clamp(calc(180px * var(--f)), 34vw, 480px)">EO</span>
+    <span style="display: block; margin: -0.35em 0 0 2.2em; font-style: italic; font-size: clamp(calc(56px * var(--f)), 9vw, 128px); letter-spacing: -0.02em; color: #E6007E">Visual Studio</span>
   </h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 64px; margin-top: 96px; padding-top: 32px; border-top: 1px solid #FFFFFF">
+  <div style="display: flex; flex-wrap: wrap; gap: calc(64px * var(--k)); margin-top: 96px; padding-top: 32px; border-top: 1px solid #FFFFFF">
     <div style="flex: 1 1 360px; min-width: 0">
       <p style="margin: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">Made with Claude</p>
-      <p style="margin: 24px 0 0 0; font-family: 'Noto Sans KR', sans-serif; font-size: 22px; font-weight: 300; line-height: 1.6; max-width: 460px">이 포트폴리오는 모두 클로드로 제작되었습니다.</p>
+      <p style="margin: calc(24px * var(--k)) 0 0 0; font-family: 'Noto Sans KR', sans-serif; font-size: 22px; font-weight: 300; line-height: 1.6; max-width: 460px">이 포트폴리오는 모두 클로드로 제작되었습니다.</p>
     </div>
     <ul style="flex: 1 1 260px; min-width: 0; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 2.1; letter-spacing: 0.06em; color: #D9D9D9">
       <li>AI 패션 캠페인</li>
@@ -752,7 +766,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <li>AI 패션 필름</li>
       <li>크리에이티브 디렉션</li>
     </ul>
-    <dl style="flex: 1 1 300px; min-width: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
+    <dl style="flex: 1 1 300px; min-width: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(24px * var(--k)); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase">
       <div style="grid-column: span 2"><dt style="color: #A6A6A6">이메일</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">rladjwls0682@gmail.com</dd></div>
       <div><dt style="color: #A6A6A6">인스타그램</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">@eo_visual.studio</dd></div>
       <div><dt style="color: #A6A6A6">비핸스</dt><dd style="margin: 8px 0 0 0; text-transform: none; letter-spacing: 0.06em; font-size: 13px">behance.net/3ae033e5</dd></div>
@@ -820,7 +834,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 (function () {
   var tabs = { '2026': document.getElementById('tab-2026'), '2025': document.getElementById('tab-2025') };
   var panels = { '2026': document.getElementById('y2026'), '2025': document.getElementById('y2025') };
-  var count = document.getElementById('count');
+  var count = { textContent: '', hidden: true };
   var pages = Array.prototype.slice.call(document.querySelectorAll('#y2025 .page'));
   var total = pages.length;
   var base = document.baseURI;
